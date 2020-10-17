@@ -86,6 +86,8 @@ GEM
     dotenv (2.7.6)
     erubi (1.9.0)
     execjs (2.7.0)
+    faker (2.14.0)
+      i18n (>= 1.6, < 2)
     ffi (1.13.1)
     foreman (0.87.2)
     globalid (0.4.2)
@@ -94,7 +96,19 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.1)
       activesupport (>= 5.0.0)
-    libv8 (8.4.255.0-x86_64-darwin-19)
+    kaminari (1.2.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.1)
+      kaminari-activerecord (= 1.2.1)
+      kaminari-core (= 1.2.1)
+    kaminari-actionview (1.2.1)
+      actionview
+      kaminari-core (= 1.2.1)
+    kaminari-activerecord (1.2.1)
+      activerecord
+      kaminari-core (= 1.2.1)
+    kaminari-core (1.2.1)
+    libv8 (8.4.255.0)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -117,6 +131,9 @@ GEM
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     pg (1.2.3)
+    pg_search (2.3.4)
+      activerecord (>= 5.2)
+      activesupport (>= 5.2)
     public_suffix (4.0.6)
     puma (4.3.6)
       nio4r (~> 2.0)
@@ -198,6 +215,10 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
+    versionist (2.0.1)
+      activesupport (>= 3)
+      railties (>= 3)
+      yard (~> 0.9.20)
     web-console (4.0.4)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -217,6 +238,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
+    yard (0.9.25)
     zeitwerk (2.4.0)
 
 PLATFORMS
@@ -229,11 +251,14 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   dotenv
+  faker
   foreman
   jbuilder (~> 2.7)
+  kaminari
   listen (~> 3.2)
   mini_racer
   pg (>= 0.18, < 2.0)
+  pg_search
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.4)
   react_on_rails (~> 12.0.0)
@@ -243,6 +268,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
   tzinfo-data
+  versionist
   web-console (>= 3.3.0)
   webdrivers
   webpacker (~> 5.0)

@@ -31,11 +31,15 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem "react_on_rails", "~> 12.0.0"
 gem 'dotenv'
 gem 'foreman'
+gem 'versionist'
+gem 'kaminari'
+gem 'pg_search'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem "binding_of_caller"
+  gem "faker"
 end
 
 group :development do
