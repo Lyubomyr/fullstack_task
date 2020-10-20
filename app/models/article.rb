@@ -7,5 +7,6 @@ class Article < ApplicationRecord
   belongs_to :story
 
   TYPES = {blog_post: 0, tweet: 1, fb_post: 2}
+  TYPES_OPTIONS = TYPES.keys.map {|type| {value: type, label: type.to_s.humanize} }
   enum article_type: TYPES
 end
