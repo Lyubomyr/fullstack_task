@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'unicorn'
 gem "react_on_rails", "~> 12.0.0"
 gem 'dotenv'
 gem 'foreman'

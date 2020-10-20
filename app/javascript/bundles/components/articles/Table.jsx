@@ -65,6 +65,7 @@ const Table = props => {
     <>
       <h3> Articles </h3>
       <BootstrapTable
+        bootstrap4
         remote
         keyField="id"
         data={ articles }

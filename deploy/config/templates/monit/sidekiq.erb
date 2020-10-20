@@ -1,0 +1,6 @@
+check process sidekiq
+    with pidfile "<%= fetch(:sidekiq_pid_path) %>"
+    start program = "<%= fetch(:sidekiq_script_path) %> start" with timeout 90 seconds
+    stop program = "<%= fetch(:sidekiq_script_path) %> stop" with timeout 90 seconds
+    if 5 restarts with 5 cycles then timeout
+    if does not exist for 1 cycle then restart
