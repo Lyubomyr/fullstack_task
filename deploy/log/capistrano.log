@@ -6883,3 +6883,1575 @@ Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--6-1!node
     Module not found: Error: Can't resolve '../fonts/glyphicons-halflings-regular.woff2' in '/home/deploy/applications/fullstack_task_production/releases/20201020155431/app/javascript/packs'
      @ ./app/javascript/packs/application.scss (./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss) 5:36-90
 
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-10-20 22:23:56 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [92782791] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/rvm1scripts/ as deploy@172.104.148.197
+ DEBUG [92782791] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/rvm1scripts/
+  INFO [3c3d70e8] Finished in 1.776 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/namaste/.rvm/gems/ruby-2.7.1@fullstack-deploy/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/namaste/.rvm/gems/ruby-2.7.1@fullstack-deploy/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [152471a0] Running /usr/bin/env chmod +x /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh as deploy@172.104.148.197
+ DEBUG [152471a0] Command: /usr/bin/env chmod +x /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh
+  INFO [049387ac] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [fafd269e] Running /usr/bin/env mkdir -p /tmp as deploy@172.104.148.197
+ DEBUG [fafd269e] Command: /usr/bin/env mkdir -p /tmp
+  INFO [caed7dd2] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-fullstack_task_production-production-namaste.sh 0.0%
+  INFO Uploading /tmp/git-ssh-fullstack_task_production-production-namaste.sh 100.0%
+  INFO [10b1f469] Running /usr/bin/env chmod 700 /tmp/git-ssh-fullstack_task_production-production-namaste.sh as deploy@172.104.148.197
+ DEBUG [10b1f469] Command: /usr/bin/env chmod 700 /tmp/git-ssh-fullstack_task_production-production-namaste.sh
+  INFO [06566dde] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG [3d71c4c2] Running [ -f /home/deploy/applications/fullstack_task_production/repo/HEAD ] as deploy@172.104.148.197
+ DEBUG [3d71c4c2] Command: [ -f /home/deploy/applications/fullstack_task_production/repo/HEAD ]
+ DEBUG [82a5ce3f] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/applications/fullstack_task_production/repo
+ DEBUG [35de41b0] Running if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [35de41b0] Command: if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi
+ DEBUG [375c60d5] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [7967f717] Running /usr/bin/env git remote set-url origin git@github.com:Lyubomyr/fullstack_task.git as deploy@172.104.148.197
+ DEBUG [7967f717] Command: cd /home/deploy/applications/fullstack_task_production/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env git remote set-url origin git@github.com:Lyubomyr/fullstack_task.git )
+  INFO [d2598aa3] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO [a3954109] Running /usr/bin/env git remote update --prune as deploy@172.104.148.197
+ DEBUG [a3954109] Command: cd /home/deploy/applications/fullstack_task_production/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [3d88a112] 	Fetching origin
+ DEBUG [3d88a112] 	Failed to add the host to the list of known hosts (/home/deploy/.ssh/known_hosts).
+ DEBUG [3d88a112] 	From github.com:Lyubomyr/fullstack_task
+ + 858a5f1...6ad8b60 master     -> master  (forced update)
+  INFO [3d88a112] Finished in 1.545 seconds with exit status 0 (successful).
+ DEBUG [82ec246b] Running if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [82ec246b] Command: if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi
+ DEBUG [8c5aba50] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [bb49dc16] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020192358 as deploy@172.104.148.197
+ DEBUG [bb49dc16] Command: cd /home/deploy/applications/fullstack_task_production/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020192358 )
+  INFO [b1a84c68] Finished in 0.143 seconds with exit status 0 (successful).
+  INFO [6205729a] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/applications/fullstack_task_production/releases/20201020192358 as deploy@172.104.148.197
+ DEBUG [6205729a] Command: cd /home/deploy/applications/fullstack_task_production/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/applications/fullstack_task_production/releases/20201020192358 )
+  INFO [ab0fed44] Finished in 0.167 seconds with exit status 0 (successful).
+ DEBUG [fccb8195] Running if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [fccb8195] Command: if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi
+ DEBUG [d84088b2] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG [b20c51dd] Running /usr/bin/env git rev-list --max-count=1 master as deploy@172.104.148.197
+ DEBUG [b20c51dd] Command: cd /home/deploy/applications/fullstack_task_production/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [6dc2eb33] 	6ad8b60fce9354e1e0367158482f9c4c1ce81b19
+ DEBUG [6dc2eb33] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [fef24d44] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020192358; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020192358'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [fef24d44] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020192358; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020192358'" 1>&2; false; fi
+ DEBUG [6b25b0c7] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [83c3b50e] Running /usr/bin/env echo "6ad8b60fce9354e1e0367158482f9c4c1ce81b19" > REVISION as deploy@172.104.148.197
+ DEBUG [83c3b50e] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020192358 && /usr/bin/env echo "6ad8b60fce9354e1e0367158482f9c4c1ce81b19" > REVISION
+  INFO [5e611aad] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [3875f834] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020192358/config /home/deploy/applications/fullstack_task_production/releases/20201020192358 as deploy@172.104.148.197
+ DEBUG [3875f834] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020192358/config /home/deploy/applications/fullstack_task_production/releases/20201020192358
+  INFO [ea725fd0] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [5a173677] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/database.yml ] as deploy@172.104.148.197
+ DEBUG [5a173677] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/database.yml ]
+ DEBUG [92b64403] Finished in 0.138 seconds with exit status 1 (failed).
+ DEBUG [25f927ad] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/database.yml ] as deploy@172.104.148.197
+ DEBUG [25f927ad] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/database.yml ]
+ DEBUG [1abcfa92] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [d8df6e8b] Running /usr/bin/env rm /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/database.yml as deploy@172.104.148.197
+ DEBUG [d8df6e8b] Command: /usr/bin/env rm /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/database.yml
+  INFO [179e2f4d] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [150768ec] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/database.yml /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/database.yml as deploy@172.104.148.197
+ DEBUG [150768ec] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/database.yml /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/database.yml
+  INFO [d8899123] Finished in 0.126 seconds with exit status 0 (successful).
+ DEBUG [37ecb262] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/unicorn.rb ] as deploy@172.104.148.197
+ DEBUG [37ecb262] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/unicorn.rb ]
+ DEBUG [ced9de82] Finished in 0.128 seconds with exit status 1 (failed).
+ DEBUG [d800bf5b] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/unicorn.rb ] as deploy@172.104.148.197
+ DEBUG [d800bf5b] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/unicorn.rb ]
+ DEBUG [5ff8386a] Finished in 0.133 seconds with exit status 1 (failed).
+  INFO [9d2bbaa1] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/unicorn.rb /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/unicorn.rb as deploy@172.104.148.197
+ DEBUG [9d2bbaa1] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/unicorn.rb /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/unicorn.rb
+  INFO [74c60f02] Finished in 0.138 seconds with exit status 0 (successful).
+ DEBUG [ec4c267d] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/master.key ] as deploy@172.104.148.197
+ DEBUG [ec4c267d] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/master.key ]
+ DEBUG [23654a6d] Finished in 0.135 seconds with exit status 1 (failed).
+ DEBUG [294adc16] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/master.key ] as deploy@172.104.148.197
+ DEBUG [294adc16] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/master.key ]
+ DEBUG [8b57c395] Finished in 0.129 seconds with exit status 1 (failed).
+  INFO [2565da3f] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/master.key /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/master.key as deploy@172.104.148.197
+ DEBUG [2565da3f] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/master.key /home/deploy/applications/fullstack_task_production/releases/20201020192358/config/master.key
+  INFO [480ba50b] Finished in 0.134 seconds with exit status 0 (successful).
+ DEBUG [615b7bd7] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/.ruby-version ] as deploy@172.104.148.197
+ DEBUG [615b7bd7] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/.ruby-version ]
+ DEBUG [76d2acfc] Finished in 0.126 seconds with exit status 1 (failed).
+ DEBUG [329190dd] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020192358/.ruby-version ] as deploy@172.104.148.197
+ DEBUG [329190dd] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020192358/.ruby-version ]
+ DEBUG [0f1ff993] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [749d2f61] Running /usr/bin/env rm /home/deploy/applications/fullstack_task_production/releases/20201020192358/.ruby-version as deploy@172.104.148.197
+ DEBUG [749d2f61] Command: /usr/bin/env rm /home/deploy/applications/fullstack_task_production/releases/20201020192358/.ruby-version
+  INFO [a6acaac4] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [03f271ef] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/.ruby-version /home/deploy/applications/fullstack_task_production/releases/20201020192358/.ruby-version as deploy@172.104.148.197
+ DEBUG [03f271ef] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/.ruby-version /home/deploy/applications/fullstack_task_production/releases/20201020192358/.ruby-version
+  INFO [3062608c] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [995f3f36] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/.env ] as deploy@172.104.148.197
+ DEBUG [995f3f36] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/.env ]
+ DEBUG [628a67a0] Finished in 0.140 seconds with exit status 1 (failed).
+ DEBUG [7a36dc50] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020192358/.env ] as deploy@172.104.148.197
+ DEBUG [7a36dc50] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020192358/.env ]
+ DEBUG [6c6f951d] Finished in 0.148 seconds with exit status 1 (failed).
+  INFO [337503e5] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/.env /home/deploy/applications/fullstack_task_production/releases/20201020192358/.env as deploy@172.104.148.197
+ DEBUG [337503e5] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/.env /home/deploy/applications/fullstack_task_production/releases/20201020192358/.env
+  INFO [5336da59] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [18a87bc9] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020192358 /home/deploy/applications/fullstack_task_production/releases/20201020192358/public /home/deploy/applications/fullstack_task_production/releases/20201020192358/tmp as deploy@172.104.148.197
+ DEBUG [18a87bc9] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020192358 /home/deploy/applications/fullstack_task_production/releases/20201020192358/public /home/deploy/applications/fullstack_task_production/releases/20201020192358/tmp
+  INFO [5266f6a4] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [34208f42] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/log ] as deploy@172.104.148.197
+ DEBUG [34208f42] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/log ]
+ DEBUG [69788715] Finished in 0.128 seconds with exit status 1 (failed).
+ DEBUG [b2f531c3] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020192358/log ] as deploy@172.104.148.197
+ DEBUG [b2f531c3] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020192358/log ]
+ DEBUG [b448cd9b] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [e16f260e] Running /usr/bin/env rm -rf /home/deploy/applications/fullstack_task_production/releases/20201020192358/log as deploy@172.104.148.197
+ DEBUG [e16f260e] Command: /usr/bin/env rm -rf /home/deploy/applications/fullstack_task_production/releases/20201020192358/log
+  INFO [1a38d272] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [3555bdc6] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/log /home/deploy/applications/fullstack_task_production/releases/20201020192358/log as deploy@172.104.148.197
+ DEBUG [3555bdc6] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/log /home/deploy/applications/fullstack_task_production/releases/20201020192358/log
+  INFO [dec4c1f7] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [717eeb1d] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/pids ] as deploy@172.104.148.197
+ DEBUG [717eeb1d] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/pids ]
+ DEBUG [fdf021b7] Finished in 0.127 seconds with exit status 1 (failed).
+ DEBUG [84cf710c] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020192358/pids ] as deploy@172.104.148.197
+ DEBUG [84cf710c] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020192358/pids ]
+ DEBUG [20937066] Finished in 0.127 seconds with exit status 1 (failed).
+  INFO [23c96d7e] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/pids /home/deploy/applications/fullstack_task_production/releases/20201020192358/pids as deploy@172.104.148.197
+ DEBUG [23c96d7e] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/pids /home/deploy/applications/fullstack_task_production/releases/20201020192358/pids
+  INFO [4b0e9ec1] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [c9562b3c] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/sockets ] as deploy@172.104.148.197
+ DEBUG [c9562b3c] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/sockets ]
+ DEBUG [0e81d151] Finished in 0.124 seconds with exit status 1 (failed).
+ DEBUG [77f51a33] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020192358/sockets ] as deploy@172.104.148.197
+ DEBUG [77f51a33] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020192358/sockets ]
+ DEBUG [2c555a40] Finished in 0.129 seconds with exit status 1 (failed).
+  INFO [642a2dcf] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/sockets /home/deploy/applications/fullstack_task_production/releases/20201020192358/sockets as deploy@172.104.148.197
+ DEBUG [642a2dcf] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/sockets /home/deploy/applications/fullstack_task_production/releases/20201020192358/sockets
+  INFO [b43fd959] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [0a9bdf15] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/uploads ] as deploy@172.104.148.197
+ DEBUG [0a9bdf15] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/uploads ]
+ DEBUG [ad7c6031] Finished in 0.145 seconds with exit status 1 (failed).
+ DEBUG [664e999b] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/uploads ] as deploy@172.104.148.197
+ DEBUG [664e999b] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/uploads ]
+ DEBUG [ed5dfc4e] Finished in 0.130 seconds with exit status 1 (failed).
+  INFO [fc94589f] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/public/uploads /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/uploads as deploy@172.104.148.197
+ DEBUG [fc94589f] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/public/uploads /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/uploads
+  INFO [c87e33fc] Finished in 0.136 seconds with exit status 0 (successful).
+ DEBUG [946f30ea] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/assets ] as deploy@172.104.148.197
+ DEBUG [946f30ea] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/assets ]
+ DEBUG [8ae1a99e] Finished in 0.132 seconds with exit status 1 (failed).
+ DEBUG [83440cc3] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/assets ] as deploy@172.104.148.197
+ DEBUG [83440cc3] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/assets ]
+ DEBUG [599ce366] Finished in 0.130 seconds with exit status 1 (failed).
+  INFO [56814a4c] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/public/assets /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/assets as deploy@172.104.148.197
+ DEBUG [56814a4c] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/public/assets /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/assets
+  INFO [0c01d467] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [20f2d03c] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/tmp/cache ] as deploy@172.104.148.197
+ DEBUG [20f2d03c] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020192358/tmp/cache ]
+ DEBUG [687f929b] Finished in 0.133 seconds with exit status 1 (failed).
+ DEBUG [8eaf1555] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020192358/tmp/cache ] as deploy@172.104.148.197
+ DEBUG [8eaf1555] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020192358/tmp/cache ]
+ DEBUG [a382568b] Finished in 0.129 seconds with exit status 1 (failed).
+  INFO [f3512a87] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/tmp/cache /home/deploy/applications/fullstack_task_production/releases/20201020192358/tmp/cache as deploy@172.104.148.197
+ DEBUG [f3512a87] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/tmp/cache /home/deploy/applications/fullstack_task_production/releases/20201020192358/tmp/cache
+  INFO [f1d3b67c] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [3865dfbb] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/rvm1scripts/ as deploy@172.104.148.197
+ DEBUG [3865dfbb] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/rvm1scripts/
+  INFO [a3567796] Finished in 0.137 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/namaste/.rvm/gems/ruby-2.7.1@fullstack-deploy/gems/rvm1-capistrano3-1.4.0/script/install-rvm.sh 0.0%
+  INFO Uploading /Users/namaste/.rvm/gems/ruby-2.7.1@fullstack-deploy/gems/rvm1-capistrano3-1.4.0/script/install-rvm.sh 100.0%
+  INFO [87983082] Running /usr/bin/env chmod +x /home/deploy/applications/fullstack_task_production/rvm1scripts/install-rvm.sh as deploy@172.104.148.197
+ DEBUG [87983082] Command: /usr/bin/env chmod +x /home/deploy/applications/fullstack_task_production/rvm1scripts/install-rvm.sh
+  INFO [c8fe5058] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [ebbb9a8f] Running /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/install-rvm.sh as deploy@172.104.148.197
+ DEBUG [ebbb9a8f] Command: /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/install-rvm.sh
+ DEBUG [995aa75c] 	Downloading https://github.com/rvm/rvm/archive/1.29.10.tar.gz
+ DEBUG [995aa75c] 	Downloading https://github.com/rvm/rvm/releases/download/1.29.10/1.29.10.tar.gz.asc
+ DEBUG [995aa75c] 	gpg: Signature made Wed Mar 25 21:58:42 2020 UTC
+ DEBUG [995aa75c] 	
+ DEBUG [995aa75c] 	gpg:                using RSA key 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+ DEBUG [995aa75c] 	
+ DEBUG [995aa75c] 	gpg: Good signature from "Piotr Kuczynski <piotr.kuczynski@gmail.com>" [unknown
+ DEBUG [995aa75c] 	]
+ DEBUG [995aa75c] 	gpg: 
+ DEBUG [995aa75c] 	WARNING: This key is not certified with a trusted signature!
+ DEBUG [995aa75c] 	gpg: 
+ DEBUG [995aa75c] 	         There is no indication that the signature belongs to the owner.
+ DEBUG [995aa75c] 	Primary key fingerprint: 7D2B AF1C F37B 13E2 069D  6956 105B D0E7 3949 9BDB
+ DEBUG [995aa75c] 	
+ DEBUG [995aa75c] 	GPG verified '/home/deploy/.rvm/archives/rvm-1.29.10.tgz'
+ DEBUG [995aa75c] 	Upgrading the RVM installation in /home/deploy/.rvm/
+ DEBUG [995aa75c] 	    RVM PATH line found in /home/deploy/.mkshrc /home/deploy/.profile /home/deploy/.bashrc /home/deploy/.zshrc.
+    RVM sourcing line found in /home/deploy/.profile /home/deploy/.bash_profile /home/deploy/.zlogin.
+ DEBUG [995aa75c] 	Upgrade of RVM in /home/deploy/.rvm/ is complete.
+ DEBUG [995aa75c] 	  * It looks like some old stuff is laying around RVM, you can cleanup with: <code>rvm cleanup all</code>
+ DEBUG [995aa75c] 	
+ DEBUG [995aa75c] 	
+ DEBUG [995aa75c] 	<warn>Thanks for installing RVM 🙏</warn>
+Please consider donating to our open collective to help us maintain RVM.
+
+👉  Donate: <code>https://opencollective.com/rvm/donate</code>
+
+
+  INFO [995aa75c] Finished in 3.426 seconds with exit status 0 (successful).
+ DEBUG [7b9afef3] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020192358; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020192358'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [7b9afef3] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020192358; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020192358'" 1>&2; false; fi
+ DEBUG [cf517802] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [3453e71d] Running /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh rvm --install install 2.7.1@fullstack_task as deploy@172.104.148.197
+ DEBUG [3453e71d] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020192358 && /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh rvm --install install 2.7.1@fullstack_task
+ DEBUG [9b5a32c6] 	Already installed ruby-2.7.1.
+To reinstall use:
+
+    rvm reinstall ruby-2.7.1
+
+  INFO [9b5a32c6] Finished in 0.589 seconds with exit status 0 (successful).
+ DEBUG [5565a65d] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020192358; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020192358'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [5565a65d] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020192358; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020192358'" 1>&2; false; fi
+ DEBUG [b3b50428] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [6c733cf2] Running /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh 2.7.1@fullstack_task gem install --file Gemfile as deploy@172.104.148.197
+ DEBUG [6c733cf2] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020192358 && /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh 2.7.1@fullstack_task gem install --file Gemfile
+ DEBUG [e7d9e635] 	Using rack (2.2.3)
+Using erubi (1.9.0)
+Using coderay (1.1.3)
+Using better_errors (2.8.3)
+Using debug_inspector (0.0.3)
+Using binding_of_caller (0.8.0)
+Using msgpack (1.3.3)
+Using bootsnap (1.4.8)
+Using byebug (11.1.3)
+Using mini_portile2 (2.4.0)
+Using nokogiri (1.10.10)
+Using xpath (3.2.0)
+Using regexp_parser (1.8.1)
+Using rack-test (1.1.0)
+Using mini_mime (1.0.2)
+Using public_suffix (4.0.6)
+Using addressable (2.7.0)
+Using capybara (3.33.0)
+Using dotenv (2.7.6)
+Using concurrent-ruby (1.1.7)
+Using i18n (1.8.5)
+Using faker (2.14.0)
+Using foreman (0.87.2)
+Using zeitwerk (2.4.0)
+Using thread_safe (0.3.6)
+Using tzinfo (1.2.7)
+Using minitest (5.14.2)
+Using activesupport (6.0.3.4)
+Using jbuilder (2.10.1)
+Using kaminari-core (1.2.1)
+Using activemodel (6.0.3.4)
+Using activerecord (6.0.3.4)
+Using kaminari-activerecord (1.2.1)
+Using crass (1.0.6)
+Using loofah (2.7.0)
+Using rails-html-sanitizer (1.3.0)
+Using rails-dom-testing (2.0.3)
+Using builder (3.2.4)
+Using actionview (6.0.3.4)
+Using kaminari-actionview (1.2.1)
+Using kaminari (1.2.1)
+Using ffi (1.13.1)
+Using rb-inotify (0.10.1)
+Using rb-fsevent (0.10.4)
+Using listen (3.2.1)
+Using libv8 (8.4.255.0)
+Using mini_racer (0.3.1)
+Using pg (1.2.3)
+Using pg_search (2.3.4)
+Using nio4r (2.5.4)
+Using puma (4.3.6)
+Using sprockets (4.0.2)
+Using actionpack (6.0.3.4)
+Using sprockets-rails (3.2.2)
+Using thor (1.0.1)
+Using rake (13.0.1)
+Using method_source (1.0.0)
+Using railties (6.0.3.4)
+Using bundler (2.1.4)
+Using mimemagic (0.3.5)
+Using marcel (0.3.3)
+Using globalid (0.4.2)
+Using activejob (6.0.3.4)
+Using activestorage (6.0.3.4)
+Using actiontext (6.0.3.4)
+Using mail (2.7.1)
+Using actionmailer (6.0.3.4)
+Using actionmailbox (6.0.3.4)
+Using websocket-extensions (0.1.5)
+Using websocket-driver (0.7.3)
+Using actioncable (6.0.3.4)
+Using rails (6.0.3.4)
+Using semantic_range (2.3.0)
+Using rack-proxy (0.6.5)
+Using webpacker (5.2.1)
+Using rainbow (3.0.0)
+Using execjs (2.7.0)
+Using connection_pool (2.2.3)
+Using react_on_rails (12.0.3)
+Using tilt (2.0.10)
+Using sassc (2.4.0)
+Using sassc-rails (2.1.2)
+Using sass-rails (6.0.0)
+Using rubyzip (2.3.0)
+Using childprocess (3.0.0)
+Using selenium-webdriver (3.142.7)
+Using spring (2.1.1)
+Using spring-watcher-listen (2.0.1)
+Using turbolinks-source (5.2.0)
+Using turbolinks (5.2.1)
+Using tzinfo-data (1.2020.3)
+Using raindrops (0.19.1)
+Using kgio (2.11.3)
+Using unicorn (5.7.0)
+Using yard (0.9.25)
+Using versionist (2.0.1)
+Using bindex (0.8.1)
+Using web-console (4.0.4)
+Using webdrivers (4.4.1)
+  INFO [e7d9e635] Finished in 25.608 seconds with exit status 0 (successful).
+ DEBUG [d96906a4] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020192358; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020192358'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [d96906a4] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020192358; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020192358'" 1>&2; false; fi
+ DEBUG [126126de] Finished in 0.475 seconds with exit status 0 (successful).
+  INFO [9e9d13e6] Running /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh rvm alias create fullstack_task_production 2.7.1@fullstack_task as deploy@172.104.148.197
+ DEBUG [9e9d13e6] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020192358 && /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh rvm alias create fullstack_task_production 2.7.1@fullstack_task
+ DEBUG [d5488dc3] 	Creating alias fullstack_task_production for ruby-2.7.1@fullstack_task
+ DEBUG [d5488dc3] 	.....
+  INFO [d5488dc3] Finished in 0.620 seconds with exit status 0 (successful).
+  INFO [eb5d05ca] Running /usr/bin/env git ls-remote git@github.com:Lyubomyr/fullstack_task.git HEAD as deploy@172.104.148.197
+ DEBUG [eb5d05ca] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env git ls-remote git@github.com:Lyubomyr/fullstack_task.git HEAD )
+ DEBUG [1c81c94c] 	Failed to add the host to the list of known hosts (/home/deploy/.ssh/known_hosts).
+ DEBUG [1c81c94c] 	6ad8b60fce9354e1e0367158482f9c4c1ce81b19	HEAD
+  INFO [1c81c94c] Finished in 1.125 seconds with exit status 0 (successful).
+  INFO [f324f759] Running /usr/bin/env sudo mkdir -pv /home/deploy/applications/fullstack_task_production as deploy@172.104.148.197
+ DEBUG [f324f759] Command: /usr/bin/env sudo mkdir -pv /home/deploy/applications/fullstack_task_production
+  INFO [f324f759] Finished in 0.452 seconds with exit status 0 (successful).
+ DEBUG [94884b81] Running /usr/bin/env id -un as deploy@172.104.148.197
+ DEBUG [94884b81] Command: /usr/bin/env id -un
+ DEBUG [cc0cdf15] 	deploy
+ DEBUG [cc0cdf15] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [9ad437df] Running /usr/bin/env id -gn as deploy@172.104.148.197
+ DEBUG [9ad437df] Command: /usr/bin/env id -gn
+ DEBUG [12b47ad2] 	sudo
+ DEBUG [12b47ad2] Finished in 0.141 seconds with exit status 0 (successful).
+  INFO [3887391e] Running /usr/bin/env sudo chown deploy:sudo /home/deploy/applications/fullstack_task_production as deploy@172.104.148.197
+ DEBUG [3887391e] Command: /usr/bin/env sudo chown deploy:sudo /home/deploy/applications/fullstack_task_production
+  INFO [3887391e] Finished in 0.139 seconds with exit status 0 (successful).
+  INFO [5f9615d4] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared /home/deploy/applications/fullstack_task_production/releases as deploy@172.104.148.197
+ DEBUG [5f9615d4] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared /home/deploy/applications/fullstack_task_production/releases
+  INFO [4bda2867] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [6b3d7de3] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared/log /home/deploy/applications/fullstack_task_production/shared/pids /home/deploy/applications/fullstack_task_production/shared/sockets /home/deploy/applications/fullstack_task_production/shared/public/uploads /home/deploy/applications/fullstack_task_production/shared/public/assets /home/deploy/applications/fullstack_task_production/shared/tmp/cache as deploy@172.104.148.197
+ DEBUG [6b3d7de3] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared/log /home/deploy/applications/fullstack_task_production/shared/pids /home/deploy/applications/fullstack_task_production/shared/sockets /home/deploy/applications/fullstack_task_production/shared/public/uploads /home/deploy/applications/fullstack_task_production/shared/public/assets /home/deploy/applications/fullstack_task_production/shared/tmp/cache
+  INFO [ddce2d51] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [7863839a] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared/config /home/deploy/applications/fullstack_task_production/shared as deploy@172.104.148.197
+ DEBUG [7863839a] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared/config /home/deploy/applications/fullstack_task_production/shared
+  INFO [1cb308a0] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/ruby-version 0.0%
+  INFO Uploading /tmp/ruby-version 100.0%
+  INFO [eb5cb01d] Running /usr/bin/env sudo chmod 644 /tmp/ruby-version as deploy@172.104.148.197
+ DEBUG [eb5cb01d] Command: /usr/bin/env sudo chmod 644 /tmp/ruby-version
+  INFO [eb5cb01d] Finished in 0.159 seconds with exit status 0 (successful).
+  INFO [d14743f9] Running /usr/bin/env sudo chown root:root /tmp/ruby-version as deploy@172.104.148.197
+ DEBUG [d14743f9] Command: /usr/bin/env sudo chown root:root /tmp/ruby-version
+  INFO [d14743f9] Finished in 0.147 seconds with exit status 0 (successful).
+  INFO [c74d5870] Running /usr/bin/env sudo mv /tmp/ruby-version /home/deploy/applications/fullstack_task_production/shared/.ruby-version as deploy@172.104.148.197
+ DEBUG [c74d5870] Command: /usr/bin/env sudo mv /tmp/ruby-version /home/deploy/applications/fullstack_task_production/shared/.ruby-version
+  INFO [c74d5870] Finished in 0.182 seconds with exit status 0 (successful).
+ DEBUG [d2222f5e] Running [ -f /home/deploy/applications/fullstack_task_production/shared/config/database.yml ] as deploy@172.104.148.197
+ DEBUG [d2222f5e] Command: [ -f /home/deploy/applications/fullstack_task_production/shared/config/database.yml ]
+ DEBUG [a0481186] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [8ff6eefe] Running [ -f /home/deploy/applications/fullstack_task_production/shared/config/unicorn.rb ] as deploy@172.104.148.197
+ DEBUG [8ff6eefe] Command: [ -f /home/deploy/applications/fullstack_task_production/shared/config/unicorn.rb ]
+ DEBUG [a46f5165] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG [a873fc2e] Running [ -f /home/deploy/applications/fullstack_task_production/shared/config/master.key ] as deploy@172.104.148.197
+ DEBUG [a873fc2e] Command: [ -f /home/deploy/applications/fullstack_task_production/shared/config/master.key ]
+ DEBUG [ac975bd7] Finished in 0.159 seconds with exit status 0 (successful).
+ DEBUG [2c67faea] Running [ -f /home/deploy/applications/fullstack_task_production/shared/.ruby-version ] as deploy@172.104.148.197
+ DEBUG [2c67faea] Command: [ -f /home/deploy/applications/fullstack_task_production/shared/.ruby-version ]
+ DEBUG [fe0d2e09] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG [ea9ee870] Running [ -f /home/deploy/applications/fullstack_task_production/shared/.env ] as deploy@172.104.148.197
+ DEBUG [ea9ee870] Command: [ -f /home/deploy/applications/fullstack_task_production/shared/.env ]
+ DEBUG [11c930eb] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [2794b673] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020192358/REVISION ] as deploy@172.104.148.197
+ DEBUG [2794b673] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020192358/REVISION ]
+ DEBUG [f4579944] Finished in 0.136 seconds with exit status 0 (successful).
+ DEBUG [91439df2] Running /usr/bin/env cat /home/deploy/applications/fullstack_task_production/releases/20201020192358/REVISION 2>/dev/null as deploy@172.104.148.197
+ DEBUG [91439df2] Command: /usr/bin/env cat /home/deploy/applications/fullstack_task_production/releases/20201020192358/REVISION 2>/dev/null
+ DEBUG [4189a3aa] 	6ad8b60fce9354e1e0367158482f9c4c1ce81b19
+ DEBUG [4189a3aa] Finished in 0.134 seconds with exit status 0 (successful).
+ DEBUG [20b60b89] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020192358; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020192358'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [20b60b89] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020192358; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020192358'" 1>&2; false; fi
+ DEBUG [3e79aea6] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [7faaeac3] Running /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh 2.7.1@fullstack_task rake assets:precompile as deploy@172.104.148.197
+ DEBUG [7faaeac3] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020192358 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh 2.7.1@fullstack_task rake assets:precompile )
+ DEBUG [3adb9723] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [3adb9723] 	Resolving dependencies...
+ DEBUG [3adb9723] 	
+ DEBUG [3adb9723] 	yarn install v1.22.5
+ DEBUG [3adb9723] 	[1/4] Resolving packages...
+ DEBUG [3adb9723] 	[2/4] Fetching packages...
+ DEBUG [3adb9723] 	info fsevents@2.1.3: The platform "linux" is incompatible with this module.
+ DEBUG [3adb9723] 	info "fsevents@2.1.3" is an optional dependency and failed compatibility check. Excluding it from installation.
+ DEBUG [3adb9723] 	info fsevents@1.2.13: The platform "linux" is incompatible with this module.
+ DEBUG [3adb9723] 	info "fsevents@1.2.13" is an optional dependency and failed compatibility check. Excluding it from installation.
+ DEBUG [3adb9723] 	[3/4] Linking dependencies...
+ DEBUG [3adb9723] 	warning " > @babel/preset-react@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [3adb9723] 	warning "@babel/preset-react > @babel/plugin-transform-react-display-name@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [3adb9723] 	warning "@babel/preset-react > @babel/plugin-transform-react-jsx@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [3adb9723] 	warning "@babel/preset-react > @babel/plugin-transform-react-jsx-development@7.11.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [3adb9723] 	warning "@babel/preset-react > @babel/plugin-transform-react-jsx-self@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [3adb9723] 	warning "@babel/preset-react > @babel/plugin-transform-react-jsx-source@7.10.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [3adb9723] 	warning "@babel/preset-react > @babel/plugin-transform-react-pure-annotations@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [3adb9723] 	warning "@babel/preset-react > @babel/plugin-transform-react-jsx > @babel/plugin-syntax-jsx@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [3adb9723] 	warning " > bootstrap@4.3.0" has unmet peer dependency "jquery@1.9.1 - 3".
+ DEBUG [3adb9723] 	warning " > bootstrap@4.3.0" has unmet peer dependency "popper.js@^1.14.7".
+ DEBUG [3adb9723] 	warning " > react-bootstrap-table-next@4.0.3" has unmet peer dependency "classnames@^2.2.5".
+ DEBUG [3adb9723] 	warning " > react-on-rails@12.0.3" has unmet peer dependency "js-yaml@>= 3.0.0".
+ DEBUG [3adb9723] 	warning " > styled-components@5.2.0" has unmet peer dependency "react-is@>= 16.8.0".
+ DEBUG [3adb9723] 	warning " > webpack-dev-server@3.11.0" has unmet peer dependency "webpack@^4.0.0 || ^5.0.0".
+ DEBUG [3adb9723] 	warning "webpack-dev-server > webpack-dev-middleware@3.7.2" has unmet peer dependency "webpack@^4.0.0".
+ DEBUG [3adb9723] 	[4/4] Building fresh packages...
+ DEBUG [3adb9723] 	Done in 25.70s.
+ DEBUG [3adb9723] 	Compiling...
+ DEBUG [3adb9723] 	Compiled all packs in /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/packs
+Hash: ea30192f1dc7daf58eae
+Version: webpack 4.44.2
+Time: 24575ms
+Built at: 10/20/2020 7:25:39 PM
+                                            Asset      Size              Chunks                         Chunk Names
+              css/clientRegistration-974614c4.css   153 KiB  clientRegistration  [emitted] [immutable]  clientRegistration
+          css/clientRegistration-974614c4.css.map  15.7 KiB  clientRegistration  [emitted] [dev]        clientRegistration
+           js/application-9afcbb5693aa87623e69.js   124 KiB         application  [emitted] [immutable]  application
+       js/application-9afcbb5693aa87623e69.js.map   139 KiB         application  [emitted] [dev]        application
+    js/clientRegistration-e2b3039850d6df4b9d46.js  2.31 MiB  clientRegistration  [emitted] [immutable]  clientRegistration
+js/clientRegistration-e2b3039850d6df4b9d46.js.map  2.51 MiB  clientRegistration  [emitted] [dev]        clientRegistration
+                                    manifest.json  1.04 KiB                      [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+Entrypoint clientRegistration = css/clientRegistration-974614c4.css js/clientRegistration-e2b3039850d6df4b9d46.js css/clientRegistration-974614c4.css.map js/clientRegistration-e2b3039850d6df4b9d46.js.map
+[./app/javascript/bundles/helpers/dialog.js] 166 bytes {clientRegistration} [built]
+[./app/javascript/bundles/services/api.js] 3.57 KiB {clientRegistration} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/clientRegistration.js] 323 bytes {clientRegistration} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {clientRegistration} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {clientRegistration} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {clientRegistration} [built]
+    + 214 hidden modules
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js??ref--5-2!node_modules/bootstrap/dist/css/bootstrap.min.css:
+    Entrypoint mini-css-extract-plugin = *
+       2 modules
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js??ref--5-2!node_modules/react-bootstrap-table-next/dist/react-bootstrap-table2.min.css:
+    Entrypoint mini-css-extract-plugin = *
+       2 modules
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js??ref--5-2!node_modules/vex-js/dist/css/vex-theme-os.css:
+    Entrypoint mini-css-extract-plugin = *
+       2 modules
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js??ref--5-2!node_modules/vex-js/dist/css/vex.css:
+    Entrypoint mini-css-extract-plugin = *
+       2 modules
+
+  INFO [3adb9723] Finished in 56.965 seconds with exit status 0 (successful).
+ DEBUG [4428e014] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020192358; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020192358'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [4428e014] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020192358; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020192358'" 1>&2; false; fi
+ DEBUG [9dd64d33] Finished in 0.143 seconds with exit status 0 (successful).
+  INFO [4c1ae6f5] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020192358/assets_manifest_backup as deploy@172.104.148.197
+ DEBUG [4c1ae6f5] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020192358 && /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020192358/assets_manifest_backup
+  INFO [87b951d0] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [81b25e4a] Running /usr/bin/env ls /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/assets/.sprockets-manifest* as deploy@172.104.148.197
+ DEBUG [81b25e4a] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020192358 && /usr/bin/env ls /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/assets/.sprockets-manifest*
+ DEBUG [2127f516] 	/home/deploy/applications/fullstack_task_production/releases/20201020192358/public/assets/.sprockets-manifest-8e09887efecbb1a64d180f3ca08c6aa6.json
+ DEBUG [2127f516] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [ce3cc3cd] Running /usr/bin/env ls /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/assets/.sprockets-manifest* as deploy@172.104.148.197
+ DEBUG [ce3cc3cd] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020192358 && /usr/bin/env ls /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/assets/.sprockets-manifest*
+ DEBUG [a1d572ca] 	/home/deploy/applications/fullstack_task_production/releases/20201020192358/public/assets/.sprockets-manifest-8e09887efecbb1a64d180f3ca08c6aa6.json
+ DEBUG [a1d572ca] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [4febf2de] Running /usr/bin/env cp /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/assets/.sprockets-manifest-8e09887efecbb1a64d180f3ca08c6aa6.json /home/deploy/applications/fullstack_task_production/releases/20201020192358/assets_manifest_backup as deploy@172.104.148.197
+ DEBUG [4febf2de] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020192358 && /usr/bin/env cp /home/deploy/applications/fullstack_task_production/releases/20201020192358/public/assets/.sprockets-manifest-8e09887efecbb1a64d180f3ca08c6aa6.json /home/deploy/applications/fullstack_task_production/releases/20201020192358/assets_manifest_backup
+  INFO [705ff9ae] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Checking changes in db
+ DEBUG [a0a0c482] Running /usr/bin/env diff -qr /home/deploy/applications/fullstack_task_production/releases/20201020192358/db /home/deploy/applications/fullstack_task_production/current/db as deploy@172.104.148.197
+ DEBUG [a0a0c482] Command: /usr/bin/env diff -qr /home/deploy/applications/fullstack_task_production/releases/20201020192358/db /home/deploy/applications/fullstack_task_production/current/db
+ DEBUG [7ad62e9f] Finished in 0.139 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Skip `deploy:migrate` (nothing changed in db)
+  INFO [34639f37] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/releases/20201020192358 /home/deploy/applications/fullstack_task_production/releases/current as deploy@172.104.148.197
+ DEBUG [34639f37] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/releases/20201020192358 /home/deploy/applications/fullstack_task_production/releases/current
+  INFO [a71826a9] Finished in 0.138 seconds with exit status 0 (successful).
+  INFO [6597c7ed] Running /usr/bin/env mv /home/deploy/applications/fullstack_task_production/releases/current /home/deploy/applications/fullstack_task_production as deploy@172.104.148.197
+ DEBUG [6597c7ed] Command: /usr/bin/env mv /home/deploy/applications/fullstack_task_production/releases/current /home/deploy/applications/fullstack_task_production
+  INFO [fb8624d3] Finished in 0.144 seconds with exit status 0 (successful).
+  INFO [23113715] Running /usr/bin/env sudo /etc/init.d/unicorn_fullstack_task_production upgrade as deploy@172.104.148.197
+ DEBUG [23113715] Command: /usr/bin/env sudo /etc/init.d/unicorn_fullstack_task_production upgrade
+ DEBUG [23113715] 	reloaded OK
+ DEBUG [23113715] 	
+  INFO [23113715] Finished in 0.173 seconds with exit status 0 (successful).
+ DEBUG [784a8baa] Running /usr/bin/env ls -x /home/deploy/applications/fullstack_task_production/releases as deploy@172.104.148.197
+ DEBUG [784a8baa] Command: /usr/bin/env ls -x /home/deploy/applications/fullstack_task_production/releases
+ DEBUG [0f23d9bd] 	20201020142100	20201020142713	20201020145131	20201020145801	20201020153342
+20201020155431	20201020192358
+ DEBUG [0f23d9bd] Finished in 0.157 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 7 deployed releases on 172.104.148.197
+ DEBUG [73b901e9] Running [ -d /home/deploy/applications/fullstack_task_production/current ] as deploy@172.104.148.197
+ DEBUG [73b901e9] Command: [ -d /home/deploy/applications/fullstack_task_production/current ]
+ DEBUG [6d3938c0] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [ba75140f] Running /usr/bin/env readlink /home/deploy/applications/fullstack_task_production/current as deploy@172.104.148.197
+ DEBUG [ba75140f] Command: /usr/bin/env readlink /home/deploy/applications/fullstack_task_production/current
+ DEBUG [6382409c] 	/home/deploy/applications/fullstack_task_production/releases/20201020192358
+ DEBUG [6382409c] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [f556ee2c] Running /usr/bin/env rm -rf /home/deploy/applications/fullstack_task_production/releases/20201020142100 /home/deploy/applications/fullstack_task_production/releases/20201020142713 as deploy@172.104.148.197
+ DEBUG [f556ee2c] Command: /usr/bin/env rm -rf /home/deploy/applications/fullstack_task_production/releases/20201020142100 /home/deploy/applications/fullstack_task_production/releases/20201020142713
+  INFO [fe44b091] Finished in 4.345 seconds with exit status 0 (successful).
+ DEBUG [d29d8d48] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [d29d8d48] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases'" 1>&2; false; fi
+ DEBUG [53f10160] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [46ee8845] Running /usr/bin/env echo "Branch master (at 6ad8b60fce9354e1e0367158482f9c4c1ce81b19) deployed as release 20201020192358 by namaste" >> /home/deploy/applications/fullstack_task_production/revisions.log as deploy@172.104.148.197
+ DEBUG [46ee8845] Command: cd /home/deploy/applications/fullstack_task_production/releases && /usr/bin/env echo "Branch master (at 6ad8b60fce9354e1e0367158482f9c4c1ce81b19) deployed as release 20201020192358 by namaste" >> /home/deploy/applications/fullstack_task_production/revisions.log
+  INFO [e86e1407] Finished in 0.147 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-10-20 23:04:10 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e27437f5] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/rvm1scripts/ as deploy@172.104.148.197
+ DEBUG [e27437f5] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/rvm1scripts/
+  INFO [0c98b36f] Finished in 1.443 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/namaste/.rvm/gems/ruby-2.7.1@fullstack-deploy/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/namaste/.rvm/gems/ruby-2.7.1@fullstack-deploy/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [689eaf0d] Running /usr/bin/env chmod +x /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh as deploy@172.104.148.197
+ DEBUG [689eaf0d] Command: /usr/bin/env chmod +x /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh
+  INFO [a0672fb5] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [2bb78f4c] Running /usr/bin/env mkdir -p /tmp as deploy@172.104.148.197
+ DEBUG [2bb78f4c] Command: /usr/bin/env mkdir -p /tmp
+  INFO [e5cd4658] Finished in 0.138 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-fullstack_task_production-production-namaste.sh 0.0%
+  INFO Uploading /tmp/git-ssh-fullstack_task_production-production-namaste.sh 100.0%
+  INFO [90d93083] Running /usr/bin/env chmod 700 /tmp/git-ssh-fullstack_task_production-production-namaste.sh as deploy@172.104.148.197
+ DEBUG [90d93083] Command: /usr/bin/env chmod 700 /tmp/git-ssh-fullstack_task_production-production-namaste.sh
+  INFO [770b04cc] Finished in 0.140 seconds with exit status 0 (successful).
+ DEBUG [aecf1a95] Running [ -f /home/deploy/applications/fullstack_task_production/repo/HEAD ] as deploy@172.104.148.197
+ DEBUG [aecf1a95] Command: [ -f /home/deploy/applications/fullstack_task_production/repo/HEAD ]
+ DEBUG [a6693173] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/applications/fullstack_task_production/repo
+ DEBUG [c3b4b123] Running if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [c3b4b123] Command: if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi
+ DEBUG [8f618934] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [988c3388] Running /usr/bin/env git remote set-url origin git@github.com:Lyubomyr/fullstack_task.git as deploy@172.104.148.197
+ DEBUG [988c3388] Command: cd /home/deploy/applications/fullstack_task_production/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env git remote set-url origin git@github.com:Lyubomyr/fullstack_task.git )
+  INFO [6fae3bf1] Finished in 0.164 seconds with exit status 0 (successful).
+  INFO [8c3efd8c] Running /usr/bin/env git remote update --prune as deploy@172.104.148.197
+ DEBUG [8c3efd8c] Command: cd /home/deploy/applications/fullstack_task_production/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [c8cf9215] 	Fetching origin
+ DEBUG [c8cf9215] 	Failed to add the host to the list of known hosts (/home/deploy/.ssh/known_hosts).
+ DEBUG [c8cf9215] 	From github.com:Lyubomyr/fullstack_task
+ + 02f9f3e...92cd0e2 master     -> master  (forced update)
+  INFO [c8cf9215] Finished in 1.517 seconds with exit status 0 (successful).
+ DEBUG [d3e835a2] Running if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [d3e835a2] Command: if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi
+ DEBUG [c5337263] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [94ea42de] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020200412 as deploy@172.104.148.197
+ DEBUG [94ea42de] Command: cd /home/deploy/applications/fullstack_task_production/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020200412 )
+  INFO [9ff122d6] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO [42df0622] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/applications/fullstack_task_production/releases/20201020200412 as deploy@172.104.148.197
+ DEBUG [42df0622] Command: cd /home/deploy/applications/fullstack_task_production/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/applications/fullstack_task_production/releases/20201020200412 )
+  INFO [5d762622] Finished in 0.186 seconds with exit status 0 (successful).
+ DEBUG [66561497] Running if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [66561497] Command: if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi
+ DEBUG [a3293498] Finished in 0.145 seconds with exit status 0 (successful).
+ DEBUG [8b8ab24c] Running /usr/bin/env git rev-list --max-count=1 master as deploy@172.104.148.197
+ DEBUG [8b8ab24c] Command: cd /home/deploy/applications/fullstack_task_production/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [2887df6b] 	92cd0e239b7d75a6cf087c9f6ca760c5d1497fd3
+ DEBUG [2887df6b] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [7a65452c] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020200412; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020200412'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [7a65452c] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020200412; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020200412'" 1>&2; false; fi
+ DEBUG [bafb356c] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [f6cd80f1] Running /usr/bin/env echo "92cd0e239b7d75a6cf087c9f6ca760c5d1497fd3" > REVISION as deploy@172.104.148.197
+ DEBUG [f6cd80f1] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020200412 && /usr/bin/env echo "92cd0e239b7d75a6cf087c9f6ca760c5d1497fd3" > REVISION
+  INFO [e5b3d57f] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [e47529e9] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020200412/config /home/deploy/applications/fullstack_task_production/releases/20201020200412 as deploy@172.104.148.197
+ DEBUG [e47529e9] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020200412/config /home/deploy/applications/fullstack_task_production/releases/20201020200412
+  INFO [4ce64c4f] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG [5ee6c24d] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/database.yml ] as deploy@172.104.148.197
+ DEBUG [5ee6c24d] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/database.yml ]
+ DEBUG [216ef636] Finished in 0.134 seconds with exit status 1 (failed).
+ DEBUG [49365d8f] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/database.yml ] as deploy@172.104.148.197
+ DEBUG [49365d8f] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/database.yml ]
+ DEBUG [638bf06a] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [64bafea3] Running /usr/bin/env rm /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/database.yml as deploy@172.104.148.197
+ DEBUG [64bafea3] Command: /usr/bin/env rm /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/database.yml
+  INFO [e99b44c8] Finished in 0.158 seconds with exit status 0 (successful).
+  INFO [337678c0] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/database.yml /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/database.yml as deploy@172.104.148.197
+ DEBUG [337678c0] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/database.yml /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/database.yml
+  INFO [9794cf7d] Finished in 0.138 seconds with exit status 0 (successful).
+ DEBUG [9292c5bd] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/unicorn.rb ] as deploy@172.104.148.197
+ DEBUG [9292c5bd] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/unicorn.rb ]
+ DEBUG [67e62635] Finished in 0.133 seconds with exit status 1 (failed).
+ DEBUG [fc77a07b] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/unicorn.rb ] as deploy@172.104.148.197
+ DEBUG [fc77a07b] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/unicorn.rb ]
+ DEBUG [802d150b] Finished in 0.131 seconds with exit status 1 (failed).
+  INFO [87abfb3e] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/unicorn.rb /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/unicorn.rb as deploy@172.104.148.197
+ DEBUG [87abfb3e] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/unicorn.rb /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/unicorn.rb
+  INFO [7fd5555b] Finished in 0.138 seconds with exit status 0 (successful).
+ DEBUG [502438a4] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/master.key ] as deploy@172.104.148.197
+ DEBUG [502438a4] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/master.key ]
+ DEBUG [a598dbde] Finished in 0.138 seconds with exit status 1 (failed).
+ DEBUG [b0d6a64e] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/master.key ] as deploy@172.104.148.197
+ DEBUG [b0d6a64e] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/master.key ]
+ DEBUG [a079816d] Finished in 0.135 seconds with exit status 1 (failed).
+  INFO [3dbb7ed1] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/master.key /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/master.key as deploy@172.104.148.197
+ DEBUG [3dbb7ed1] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/master.key /home/deploy/applications/fullstack_task_production/releases/20201020200412/config/master.key
+  INFO [07f195fc] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [6a9017cb] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/.ruby-version ] as deploy@172.104.148.197
+ DEBUG [6a9017cb] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/.ruby-version ]
+ DEBUG [d42c0ef2] Finished in 0.132 seconds with exit status 1 (failed).
+ DEBUG [f1ad8ef2] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020200412/.ruby-version ] as deploy@172.104.148.197
+ DEBUG [f1ad8ef2] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020200412/.ruby-version ]
+ DEBUG [2f9cca21] Finished in 0.145 seconds with exit status 0 (successful).
+  INFO [2adeff4e] Running /usr/bin/env rm /home/deploy/applications/fullstack_task_production/releases/20201020200412/.ruby-version as deploy@172.104.148.197
+ DEBUG [2adeff4e] Command: /usr/bin/env rm /home/deploy/applications/fullstack_task_production/releases/20201020200412/.ruby-version
+  INFO [d68e8fe6] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [4bff3c58] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/.ruby-version /home/deploy/applications/fullstack_task_production/releases/20201020200412/.ruby-version as deploy@172.104.148.197
+ DEBUG [4bff3c58] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/.ruby-version /home/deploy/applications/fullstack_task_production/releases/20201020200412/.ruby-version
+  INFO [8166de7c] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [fe85dbc3] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/.env ] as deploy@172.104.148.197
+ DEBUG [fe85dbc3] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/.env ]
+ DEBUG [9ffc25e7] Finished in 0.129 seconds with exit status 1 (failed).
+ DEBUG [9c13ea75] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020200412/.env ] as deploy@172.104.148.197
+ DEBUG [9c13ea75] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020200412/.env ]
+ DEBUG [45dc54aa] Finished in 0.137 seconds with exit status 1 (failed).
+  INFO [7404e66b] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/.env /home/deploy/applications/fullstack_task_production/releases/20201020200412/.env as deploy@172.104.148.197
+ DEBUG [7404e66b] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/.env /home/deploy/applications/fullstack_task_production/releases/20201020200412/.env
+  INFO [7688d1c5] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [2d3b6dd3] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020200412 /home/deploy/applications/fullstack_task_production/releases/20201020200412/public /home/deploy/applications/fullstack_task_production/releases/20201020200412/tmp as deploy@172.104.148.197
+ DEBUG [2d3b6dd3] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020200412 /home/deploy/applications/fullstack_task_production/releases/20201020200412/public /home/deploy/applications/fullstack_task_production/releases/20201020200412/tmp
+  INFO [1f7d6e7f] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [5e9323d7] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/log ] as deploy@172.104.148.197
+ DEBUG [5e9323d7] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/log ]
+ DEBUG [88e21fe0] Finished in 0.130 seconds with exit status 1 (failed).
+ DEBUG [ba6ec279] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020200412/log ] as deploy@172.104.148.197
+ DEBUG [ba6ec279] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020200412/log ]
+ DEBUG [485c37ea] Finished in 0.163 seconds with exit status 0 (successful).
+  INFO [57a92adc] Running /usr/bin/env rm -rf /home/deploy/applications/fullstack_task_production/releases/20201020200412/log as deploy@172.104.148.197
+ DEBUG [57a92adc] Command: /usr/bin/env rm -rf /home/deploy/applications/fullstack_task_production/releases/20201020200412/log
+  INFO [0a8386f8] Finished in 0.141 seconds with exit status 0 (successful).
+  INFO [33b3cf0e] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/log /home/deploy/applications/fullstack_task_production/releases/20201020200412/log as deploy@172.104.148.197
+ DEBUG [33b3cf0e] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/log /home/deploy/applications/fullstack_task_production/releases/20201020200412/log
+  INFO [102a9983] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [43eface9] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/pids ] as deploy@172.104.148.197
+ DEBUG [43eface9] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/pids ]
+ DEBUG [d551554a] Finished in 0.126 seconds with exit status 1 (failed).
+ DEBUG [73c57fb8] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020200412/pids ] as deploy@172.104.148.197
+ DEBUG [73c57fb8] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020200412/pids ]
+ DEBUG [c2fd84dd] Finished in 0.139 seconds with exit status 1 (failed).
+  INFO [20777e06] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/pids /home/deploy/applications/fullstack_task_production/releases/20201020200412/pids as deploy@172.104.148.197
+ DEBUG [20777e06] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/pids /home/deploy/applications/fullstack_task_production/releases/20201020200412/pids
+  INFO [c572f364] Finished in 0.136 seconds with exit status 0 (successful).
+ DEBUG [d7e8e273] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/sockets ] as deploy@172.104.148.197
+ DEBUG [d7e8e273] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/sockets ]
+ DEBUG [07f94062] Finished in 0.133 seconds with exit status 1 (failed).
+ DEBUG [c9c82bfc] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020200412/sockets ] as deploy@172.104.148.197
+ DEBUG [c9c82bfc] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020200412/sockets ]
+ DEBUG [3367aca6] Finished in 0.151 seconds with exit status 1 (failed).
+  INFO [b5fdb7cc] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/sockets /home/deploy/applications/fullstack_task_production/releases/20201020200412/sockets as deploy@172.104.148.197
+ DEBUG [b5fdb7cc] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/sockets /home/deploy/applications/fullstack_task_production/releases/20201020200412/sockets
+  INFO [57cb959f] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [3943854d] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/uploads ] as deploy@172.104.148.197
+ DEBUG [3943854d] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/uploads ]
+ DEBUG [de7b8114] Finished in 0.136 seconds with exit status 1 (failed).
+ DEBUG [ca38284e] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/uploads ] as deploy@172.104.148.197
+ DEBUG [ca38284e] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/uploads ]
+ DEBUG [61973567] Finished in 0.142 seconds with exit status 1 (failed).
+  INFO [1a6afd6a] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/public/uploads /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/uploads as deploy@172.104.148.197
+ DEBUG [1a6afd6a] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/public/uploads /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/uploads
+  INFO [e54b483d] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [aaf1afc8] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/assets ] as deploy@172.104.148.197
+ DEBUG [aaf1afc8] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/assets ]
+ DEBUG [c4c18f38] Finished in 0.143 seconds with exit status 1 (failed).
+ DEBUG [11ad13b7] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/assets ] as deploy@172.104.148.197
+ DEBUG [11ad13b7] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/assets ]
+ DEBUG [2b88a218] Finished in 0.139 seconds with exit status 1 (failed).
+  INFO [f8aea8db] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/public/assets /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/assets as deploy@172.104.148.197
+ DEBUG [f8aea8db] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/public/assets /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/assets
+  INFO [7c4c5211] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG [b26d372b] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/tmp/cache ] as deploy@172.104.148.197
+ DEBUG [b26d372b] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020200412/tmp/cache ]
+ DEBUG [0fb746f3] Finished in 0.135 seconds with exit status 1 (failed).
+ DEBUG [9642cc92] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020200412/tmp/cache ] as deploy@172.104.148.197
+ DEBUG [9642cc92] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020200412/tmp/cache ]
+ DEBUG [1c3c4eff] Finished in 0.140 seconds with exit status 1 (failed).
+  INFO [0a02f742] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/tmp/cache /home/deploy/applications/fullstack_task_production/releases/20201020200412/tmp/cache as deploy@172.104.148.197
+ DEBUG [0a02f742] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/tmp/cache /home/deploy/applications/fullstack_task_production/releases/20201020200412/tmp/cache
+  INFO [3a66d03b] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [abc537fc] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/rvm1scripts/ as deploy@172.104.148.197
+ DEBUG [abc537fc] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/rvm1scripts/
+  INFO [63f9d82d] Finished in 0.138 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/namaste/.rvm/gems/ruby-2.7.1@fullstack-deploy/gems/rvm1-capistrano3-1.4.0/script/install-rvm.sh 0.0%
+  INFO Uploading /Users/namaste/.rvm/gems/ruby-2.7.1@fullstack-deploy/gems/rvm1-capistrano3-1.4.0/script/install-rvm.sh 100.0%
+  INFO [82b3d5ec] Running /usr/bin/env chmod +x /home/deploy/applications/fullstack_task_production/rvm1scripts/install-rvm.sh as deploy@172.104.148.197
+ DEBUG [82b3d5ec] Command: /usr/bin/env chmod +x /home/deploy/applications/fullstack_task_production/rvm1scripts/install-rvm.sh
+  INFO [3fda803a] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [1ebdbcbf] Running /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/install-rvm.sh as deploy@172.104.148.197
+ DEBUG [1ebdbcbf] Command: /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/install-rvm.sh
+ DEBUG [d01b5ad5] 	Downloading https://github.com/rvm/rvm/archive/1.29.10.tar.gz
+ DEBUG [d01b5ad5] 	Downloading https://github.com/rvm/rvm/releases/download/1.29.10/1.29.10.tar.gz.asc
+ DEBUG [d01b5ad5] 	gpg: Signature made Wed Mar 25 21:58:42 2020 UTC
+ DEBUG [d01b5ad5] 	
+ DEBUG [d01b5ad5] 	gpg:                using RSA key 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+ DEBUG [d01b5ad5] 	
+ DEBUG [d01b5ad5] 	gpg: Good signature from "Piotr Kuczynski <piotr.kuczynski@gmail.com>" [unknown
+ DEBUG [d01b5ad5] 	]
+ DEBUG [d01b5ad5] 	gpg: 
+ DEBUG [d01b5ad5] 	WARNING: This key is not certified with a trusted signature!
+ DEBUG [d01b5ad5] 	gpg: 
+ DEBUG [d01b5ad5] 	         There is no indication that the signature belongs to the owner.
+ DEBUG [d01b5ad5] 	Primary key fingerprint: 7D2B AF1C F37B 13E2 069D  6956 105B D0E7 3949 9BDB
+ DEBUG [d01b5ad5] 	
+ DEBUG [d01b5ad5] 	GPG verified '/home/deploy/.rvm/archives/rvm-1.29.10.tgz'
+ DEBUG [d01b5ad5] 	Upgrading the RVM installation in /home/deploy/.rvm/
+ DEBUG [d01b5ad5] 	    RVM PATH line found in /home/deploy/.mkshrc /home/deploy/.profile /home/deploy/.bashrc /home/deploy/.zshrc.
+    RVM sourcing line found in /home/deploy/.profile /home/deploy/.bash_profile /home/deploy/.zlogin.
+ DEBUG [d01b5ad5] 	Upgrade of RVM in /home/deploy/.rvm/ is complete.
+ DEBUG [d01b5ad5] 	  * It looks like some old stuff is laying around RVM, you can cleanup with: <code>rvm cleanup all</code>
+ DEBUG [d01b5ad5] 	
+ DEBUG [d01b5ad5] 	
+ DEBUG [d01b5ad5] 	<warn>Thanks for installing RVM 🙏</warn>
+Please consider donating to our open collective to help us maintain RVM.
+
+👉  Donate: <code>https://opencollective.com/rvm/donate</code>
+
+
+  INFO [d01b5ad5] Finished in 2.899 seconds with exit status 0 (successful).
+ DEBUG [4bf53ea2] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020200412; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020200412'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [4bf53ea2] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020200412; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020200412'" 1>&2; false; fi
+ DEBUG [2237ba2c] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [9693c830] Running /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh rvm --install install 2.7.1@fullstack_task as deploy@172.104.148.197
+ DEBUG [9693c830] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020200412 && /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh rvm --install install 2.7.1@fullstack_task
+ DEBUG [9f37636e] 	Already installed ruby-2.7.1.
+To reinstall use:
+
+    rvm reinstall ruby-2.7.1
+
+  INFO [9f37636e] Finished in 0.616 seconds with exit status 0 (successful).
+ DEBUG [b11c1c53] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020200412; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020200412'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [b11c1c53] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020200412; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020200412'" 1>&2; false; fi
+ DEBUG [373fdacd] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [b295b54e] Running /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh 2.7.1@fullstack_task gem install --file Gemfile as deploy@172.104.148.197
+ DEBUG [b295b54e] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020200412 && /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh 2.7.1@fullstack_task gem install --file Gemfile
+ DEBUG [61166383] 	Using rack (2.2.3)
+Using erubi (1.9.0)
+Using coderay (1.1.3)
+Using better_errors (2.8.3)
+Using debug_inspector (0.0.3)
+Using binding_of_caller (0.8.0)
+Using msgpack (1.3.3)
+Using bootsnap (1.4.8)
+Using byebug (11.1.3)
+Using mini_portile2 (2.4.0)
+Using nokogiri (1.10.10)
+Using xpath (3.2.0)
+Using regexp_parser (1.8.1)
+Using rack-test (1.1.0)
+Using mini_mime (1.0.2)
+Using public_suffix (4.0.6)
+Using addressable (2.7.0)
+Using capybara (3.33.0)
+Using dotenv (2.7.6)
+Using concurrent-ruby (1.1.7)
+Using i18n (1.8.5)
+Using faker (2.14.0)
+Using foreman (0.87.2)
+Using zeitwerk (2.4.0)
+Using thread_safe (0.3.6)
+Using tzinfo (1.2.7)
+Using minitest (5.14.2)
+Using activesupport (6.0.3.4)
+Using jbuilder (2.10.1)
+Using kaminari-core (1.2.1)
+Using activemodel (6.0.3.4)
+Using activerecord (6.0.3.4)
+Using kaminari-activerecord (1.2.1)
+Using crass (1.0.6)
+Using loofah (2.7.0)
+Using rails-html-sanitizer (1.3.0)
+Using rails-dom-testing (2.0.3)
+Using builder (3.2.4)
+Using actionview (6.0.3.4)
+Using kaminari-actionview (1.2.1)
+Using kaminari (1.2.1)
+Using ffi (1.13.1)
+Using rb-inotify (0.10.1)
+Using rb-fsevent (0.10.4)
+Using listen (3.2.1)
+Using libv8 (8.4.255.0)
+Using mini_racer (0.3.1)
+Using pg (1.2.3)
+Using pg_search (2.3.4)
+Using nio4r (2.5.4)
+Using puma (4.3.6)
+Using sprockets (4.0.2)
+Using actionpack (6.0.3.4)
+Using sprockets-rails (3.2.2)
+Using thor (1.0.1)
+Using rake (13.0.1)
+Using method_source (1.0.0)
+Using railties (6.0.3.4)
+Using bundler (2.1.4)
+Using mimemagic (0.3.5)
+Using marcel (0.3.3)
+Using globalid (0.4.2)
+Using activejob (6.0.3.4)
+Using activestorage (6.0.3.4)
+Using actiontext (6.0.3.4)
+Using mail (2.7.1)
+Using actionmailer (6.0.3.4)
+Using actionmailbox (6.0.3.4)
+Using websocket-extensions (0.1.5)
+Using websocket-driver (0.7.3)
+Using actioncable (6.0.3.4)
+Using rails (6.0.3.4)
+Using semantic_range (2.3.0)
+Using rack-proxy (0.6.5)
+Using webpacker (5.2.1)
+Using rainbow (3.0.0)
+Using execjs (2.7.0)
+Using connection_pool (2.2.3)
+Using react_on_rails (12.0.3)
+Using tilt (2.0.10)
+Using sassc (2.4.0)
+Using sassc-rails (2.1.2)
+Using sass-rails (6.0.0)
+Using rubyzip (2.3.0)
+Using childprocess (3.0.0)
+Using selenium-webdriver (3.142.7)
+Using spring (2.1.1)
+Using spring-watcher-listen (2.0.1)
+Using turbolinks-source (5.2.0)
+Using turbolinks (5.2.1)
+Using tzinfo-data (1.2020.3)
+Using raindrops (0.19.1)
+Using kgio (2.11.3)
+Using unicorn (5.7.0)
+Using yard (0.9.25)
+Using versionist (2.0.1)
+Using bindex (0.8.1)
+Using web-console (4.0.4)
+Using webdrivers (4.4.1)
+  INFO [61166383] Finished in 26.088 seconds with exit status 0 (successful).
+ DEBUG [6e0d191e] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020200412; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020200412'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [6e0d191e] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020200412; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020200412'" 1>&2; false; fi
+ DEBUG [0d0e73d9] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [346c0191] Running /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh rvm alias create fullstack_task_production 2.7.1@fullstack_task as deploy@172.104.148.197
+ DEBUG [346c0191] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020200412 && /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh rvm alias create fullstack_task_production 2.7.1@fullstack_task
+ DEBUG [37829e8a] 	Creating alias fullstack_task_production for ruby-2.7.1@fullstack_task
+ DEBUG [37829e8a] 	.....
+  INFO [37829e8a] Finished in 0.621 seconds with exit status 0 (successful).
+  INFO [4449452c] Running /usr/bin/env git ls-remote git@github.com:Lyubomyr/fullstack_task.git HEAD as deploy@172.104.148.197
+ DEBUG [4449452c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env git ls-remote git@github.com:Lyubomyr/fullstack_task.git HEAD )
+ DEBUG [443fc785] 	Failed to add the host to the list of known hosts (/home/deploy/.ssh/known_hosts).
+ DEBUG [443fc785] 	92cd0e239b7d75a6cf087c9f6ca760c5d1497fd3	HEAD
+  INFO [443fc785] Finished in 1.256 seconds with exit status 0 (successful).
+  INFO [37b5aa70] Running /usr/bin/env sudo mkdir -pv /home/deploy/applications/fullstack_task_production as deploy@172.104.148.197
+ DEBUG [37b5aa70] Command: /usr/bin/env sudo mkdir -pv /home/deploy/applications/fullstack_task_production
+  INFO [37b5aa70] Finished in 0.097 seconds with exit status 0 (successful).
+ DEBUG [9f14ec0b] Running /usr/bin/env id -un as deploy@172.104.148.197
+ DEBUG [9f14ec0b] Command: /usr/bin/env id -un
+ DEBUG [380e1b6e] 	deploy
+ DEBUG [380e1b6e] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [0b676c86] Running /usr/bin/env id -gn as deploy@172.104.148.197
+ DEBUG [0b676c86] Command: /usr/bin/env id -gn
+ DEBUG [822cec32] 	sudo
+ DEBUG [822cec32] Finished in 0.145 seconds with exit status 0 (successful).
+  INFO [929bbf39] Running /usr/bin/env sudo chown deploy:sudo /home/deploy/applications/fullstack_task_production as deploy@172.104.148.197
+ DEBUG [929bbf39] Command: /usr/bin/env sudo chown deploy:sudo /home/deploy/applications/fullstack_task_production
+  INFO [929bbf39] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [1b73c4b5] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared /home/deploy/applications/fullstack_task_production/releases as deploy@172.104.148.197
+ DEBUG [1b73c4b5] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared /home/deploy/applications/fullstack_task_production/releases
+  INFO [585ee538] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [1f7c7610] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared/log /home/deploy/applications/fullstack_task_production/shared/pids /home/deploy/applications/fullstack_task_production/shared/sockets /home/deploy/applications/fullstack_task_production/shared/public/uploads /home/deploy/applications/fullstack_task_production/shared/public/assets /home/deploy/applications/fullstack_task_production/shared/tmp/cache as deploy@172.104.148.197
+ DEBUG [1f7c7610] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared/log /home/deploy/applications/fullstack_task_production/shared/pids /home/deploy/applications/fullstack_task_production/shared/sockets /home/deploy/applications/fullstack_task_production/shared/public/uploads /home/deploy/applications/fullstack_task_production/shared/public/assets /home/deploy/applications/fullstack_task_production/shared/tmp/cache
+  INFO [0861f402] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [a9edb142] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared/config /home/deploy/applications/fullstack_task_production/shared as deploy@172.104.148.197
+ DEBUG [a9edb142] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared/config /home/deploy/applications/fullstack_task_production/shared
+  INFO [847bf1cb] Finished in 0.135 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/ruby-version 0.0%
+  INFO Uploading /tmp/ruby-version 100.0%
+  INFO [05cd9646] Running /usr/bin/env sudo chmod 644 /tmp/ruby-version as deploy@172.104.148.197
+ DEBUG [05cd9646] Command: /usr/bin/env sudo chmod 644 /tmp/ruby-version
+  INFO [05cd9646] Finished in 0.141 seconds with exit status 0 (successful).
+  INFO [0319503f] Running /usr/bin/env sudo chown root:root /tmp/ruby-version as deploy@172.104.148.197
+ DEBUG [0319503f] Command: /usr/bin/env sudo chown root:root /tmp/ruby-version
+  INFO [0319503f] Finished in 0.145 seconds with exit status 0 (successful).
+  INFO [8007cee5] Running /usr/bin/env sudo mv /tmp/ruby-version /home/deploy/applications/fullstack_task_production/shared/.ruby-version as deploy@172.104.148.197
+ DEBUG [8007cee5] Command: /usr/bin/env sudo mv /tmp/ruby-version /home/deploy/applications/fullstack_task_production/shared/.ruby-version
+  INFO [8007cee5] Finished in 0.140 seconds with exit status 0 (successful).
+ DEBUG [aeb00066] Running [ -f /home/deploy/applications/fullstack_task_production/shared/config/database.yml ] as deploy@172.104.148.197
+ DEBUG [aeb00066] Command: [ -f /home/deploy/applications/fullstack_task_production/shared/config/database.yml ]
+ DEBUG [3398f419] Finished in 0.138 seconds with exit status 0 (successful).
+ DEBUG [5b40d61e] Running [ -f /home/deploy/applications/fullstack_task_production/shared/config/unicorn.rb ] as deploy@172.104.148.197
+ DEBUG [5b40d61e] Command: [ -f /home/deploy/applications/fullstack_task_production/shared/config/unicorn.rb ]
+ DEBUG [b3252f7b] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [d9c9d478] Running [ -f /home/deploy/applications/fullstack_task_production/shared/config/master.key ] as deploy@172.104.148.197
+ DEBUG [d9c9d478] Command: [ -f /home/deploy/applications/fullstack_task_production/shared/config/master.key ]
+ DEBUG [742a5a6f] Finished in 0.138 seconds with exit status 0 (successful).
+ DEBUG [6971285e] Running [ -f /home/deploy/applications/fullstack_task_production/shared/.ruby-version ] as deploy@172.104.148.197
+ DEBUG [6971285e] Command: [ -f /home/deploy/applications/fullstack_task_production/shared/.ruby-version ]
+ DEBUG [75da4dd7] Finished in 0.145 seconds with exit status 0 (successful).
+ DEBUG [0b2f5bf0] Running [ -f /home/deploy/applications/fullstack_task_production/shared/.env ] as deploy@172.104.148.197
+ DEBUG [0b2f5bf0] Command: [ -f /home/deploy/applications/fullstack_task_production/shared/.env ]
+ DEBUG [238ac53c] Finished in 0.139 seconds with exit status 0 (successful).
+ DEBUG [2d7266e1] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020200412/REVISION ] as deploy@172.104.148.197
+ DEBUG [2d7266e1] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020200412/REVISION ]
+ DEBUG [fa83a187] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [c37e7e6d] Running /usr/bin/env cat /home/deploy/applications/fullstack_task_production/releases/20201020200412/REVISION 2>/dev/null as deploy@172.104.148.197
+ DEBUG [c37e7e6d] Command: /usr/bin/env cat /home/deploy/applications/fullstack_task_production/releases/20201020200412/REVISION 2>/dev/null
+ DEBUG [56a43786] 	92cd0e239b7d75a6cf087c9f6ca760c5d1497fd3
+ DEBUG [56a43786] Finished in 0.136 seconds with exit status 0 (successful).
+ DEBUG [78a41c9e] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020200412; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020200412'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [78a41c9e] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020200412; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020200412'" 1>&2; false; fi
+ DEBUG [222aacb2] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [11ad2737] Running /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh 2.7.1@fullstack_task rake assets:precompile as deploy@172.104.148.197
+ DEBUG [11ad2737] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020200412 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh 2.7.1@fullstack_task rake assets:precompile )
+ DEBUG [43792309] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [43792309] 	Resolving dependencies...
+ DEBUG [43792309] 	
+ DEBUG [43792309] 	yarn install v1.22.5
+ DEBUG [43792309] 	[1/4] Resolving packages...
+ DEBUG [43792309] 	[2/4] Fetching packages...
+ DEBUG [43792309] 	info fsevents@2.1.3: The platform "linux" is incompatible with this module.
+ DEBUG [43792309] 	info "fsevents@2.1.3" is an optional dependency and failed compatibility check. Excluding it from installation.
+ DEBUG [43792309] 	info fsevents@1.2.13: The platform "linux" is incompatible with this module.
+ DEBUG [43792309] 	info "fsevents@1.2.13" is an optional dependency and failed compatibility check. Excluding it from installation.
+ DEBUG [43792309] 	[3/4] Linking dependencies...
+ DEBUG [43792309] 	warning " > @babel/preset-react@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [43792309] 	warning "@babel/preset-react > @babel/plugin-transform-react-display-name@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [43792309] 	warning "@babel/preset-react > @babel/plugin-transform-react-jsx@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [43792309] 	warning "@babel/preset-react > @babel/plugin-transform-react-jsx-development@7.11.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [43792309] 	warning "@babel/preset-react > @babel/plugin-transform-react-jsx-self@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [43792309] 	warning "@babel/preset-react > @babel/plugin-transform-react-jsx-source@7.10.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [43792309] 	warning "@babel/preset-react > @babel/plugin-transform-react-pure-annotations@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [43792309] 	warning "@babel/preset-react > @babel/plugin-transform-react-jsx > @babel/plugin-syntax-jsx@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [43792309] 	warning " > bootstrap@4.3.0" has unmet peer dependency "jquery@1.9.1 - 3".
+ DEBUG [43792309] 	warning " > bootstrap@4.3.0" has unmet peer dependency "popper.js@^1.14.7".
+ DEBUG [43792309] 	warning " > react-bootstrap-table-next@4.0.3" has unmet peer dependency "classnames@^2.2.5".
+ DEBUG [43792309] 	warning " > react-on-rails@12.0.3" has unmet peer dependency "js-yaml@>= 3.0.0".
+ DEBUG [43792309] 	warning " > styled-components@5.2.0" has unmet peer dependency "react-is@>= 16.8.0".
+ DEBUG [43792309] 	warning " > webpack-dev-server@3.11.0" has unmet peer dependency "webpack@^4.0.0 || ^5.0.0".
+ DEBUG [43792309] 	warning "webpack-dev-server > webpack-dev-middleware@3.7.2" has unmet peer dependency "webpack@^4.0.0".
+ DEBUG [43792309] 	[4/4] Building fresh packages...
+ DEBUG [43792309] 	Done in 24.51s.
+ DEBUG [43792309] 	Compiling...
+ DEBUG [43792309] 	Compiled all packs in /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/packs
+Hash: 1675dee81223bf7e4521
+Version: webpack 4.44.2
+Time: 24950ms
+Built at: 10/20/2020 8:05:51 PM
+                                            Asset      Size              Chunks                         Chunk Names
+              css/clientRegistration-54445547.css   153 KiB  clientRegistration  [emitted] [immutable]  clientRegistration
+          css/clientRegistration-54445547.css.map  15.7 KiB  clientRegistration  [emitted] [dev]        clientRegistration
+           js/application-9afcbb5693aa87623e69.js   124 KiB         application  [emitted] [immutable]  application
+       js/application-9afcbb5693aa87623e69.js.map   139 KiB         application  [emitted] [dev]        application
+    js/clientRegistration-3af3b21c822353b58fda.js  2.31 MiB  clientRegistration  [emitted] [immutable]  clientRegistration
+js/clientRegistration-3af3b21c822353b58fda.js.map  2.51 MiB  clientRegistration  [emitted] [dev]        clientRegistration
+                                    manifest.json  1.04 KiB                      [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+Entrypoint clientRegistration = css/clientRegistration-54445547.css js/clientRegistration-3af3b21c822353b58fda.js css/clientRegistration-54445547.css.map js/clientRegistration-3af3b21c822353b58fda.js.map
+[./app/javascript/bundles/helpers/dialog.js] 166 bytes {clientRegistration} [built]
+[./app/javascript/bundles/services/api.js] 3.57 KiB {clientRegistration} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/clientRegistration.js] 323 bytes {clientRegistration} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {clientRegistration} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {clientRegistration} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {clientRegistration} [built]
+    + 214 hidden modules
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js??ref--5-2!node_modules/bootstrap/dist/css/bootstrap.min.css:
+    Entrypoint mini-css-extract-plugin = *
+       2 modules
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js??ref--5-2!node_modules/react-bootstrap-table-next/dist/react-bootstrap-table2.min.css:
+    Entrypoint mini-css-extract-plugin = *
+       2 modules
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js??ref--5-2!node_modules/vex-js/dist/css/vex-theme-os.css:
+    Entrypoint mini-css-extract-plugin = *
+       2 modules
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js??ref--5-2!node_modules/vex-js/dist/css/vex.css:
+    Entrypoint mini-css-extract-plugin = *
+       2 modules
+
+  INFO [43792309] Finished in 55.118 seconds with exit status 0 (successful).
+ DEBUG [42ccd234] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020200412; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020200412'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [42ccd234] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020200412; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020200412'" 1>&2; false; fi
+ DEBUG [dfa55373] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [14d9e9b7] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020200412/assets_manifest_backup as deploy@172.104.148.197
+ DEBUG [14d9e9b7] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020200412 && /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020200412/assets_manifest_backup
+  INFO [36149af7] Finished in 0.137 seconds with exit status 0 (successful).
+ DEBUG [6dbe75d9] Running /usr/bin/env ls /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/assets/.sprockets-manifest* as deploy@172.104.148.197
+ DEBUG [6dbe75d9] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020200412 && /usr/bin/env ls /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/assets/.sprockets-manifest*
+ DEBUG [ec2e59e5] 	/home/deploy/applications/fullstack_task_production/releases/20201020200412/public/assets/.sprockets-manifest-8e09887efecbb1a64d180f3ca08c6aa6.json
+ DEBUG [ec2e59e5] Finished in 0.139 seconds with exit status 0 (successful).
+ DEBUG [2805bbe1] Running /usr/bin/env ls /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/assets/.sprockets-manifest* as deploy@172.104.148.197
+ DEBUG [2805bbe1] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020200412 && /usr/bin/env ls /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/assets/.sprockets-manifest*
+ DEBUG [d866033d] 	/home/deploy/applications/fullstack_task_production/releases/20201020200412/public/assets/.sprockets-manifest-8e09887efecbb1a64d180f3ca08c6aa6.json
+ DEBUG [d866033d] Finished in 0.136 seconds with exit status 0 (successful).
+  INFO [9a92cd7f] Running /usr/bin/env cp /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/assets/.sprockets-manifest-8e09887efecbb1a64d180f3ca08c6aa6.json /home/deploy/applications/fullstack_task_production/releases/20201020200412/assets_manifest_backup as deploy@172.104.148.197
+ DEBUG [9a92cd7f] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020200412 && /usr/bin/env cp /home/deploy/applications/fullstack_task_production/releases/20201020200412/public/assets/.sprockets-manifest-8e09887efecbb1a64d180f3ca08c6aa6.json /home/deploy/applications/fullstack_task_production/releases/20201020200412/assets_manifest_backup
+  INFO [feb786d8] Finished in 0.143 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Checking changes in db
+ DEBUG [7bee3ea5] Running /usr/bin/env diff -qr /home/deploy/applications/fullstack_task_production/releases/20201020200412/db /home/deploy/applications/fullstack_task_production/current/db as deploy@172.104.148.197
+ DEBUG [7bee3ea5] Command: /usr/bin/env diff -qr /home/deploy/applications/fullstack_task_production/releases/20201020200412/db /home/deploy/applications/fullstack_task_production/current/db
+ DEBUG [1ca96b8a] Finished in 0.172 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Skip `deploy:migrate` (nothing changed in db)
+  INFO [959d7308] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/releases/20201020200412 /home/deploy/applications/fullstack_task_production/releases/current as deploy@172.104.148.197
+ DEBUG [959d7308] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/releases/20201020200412 /home/deploy/applications/fullstack_task_production/releases/current
+  INFO [7af6e3ff] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [25aad645] Running /usr/bin/env mv /home/deploy/applications/fullstack_task_production/releases/current /home/deploy/applications/fullstack_task_production as deploy@172.104.148.197
+ DEBUG [25aad645] Command: /usr/bin/env mv /home/deploy/applications/fullstack_task_production/releases/current /home/deploy/applications/fullstack_task_production
+  INFO [232bbc47] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [734e6108] Running /usr/bin/env sudo /etc/init.d/unicorn_fullstack_task_production upgrade as deploy@172.104.148.197
+ DEBUG [734e6108] Command: /usr/bin/env sudo /etc/init.d/unicorn_fullstack_task_production upgrade
+ DEBUG [734e6108] 	reloaded OK
+ DEBUG [734e6108] 	
+  INFO [734e6108] Finished in 0.163 seconds with exit status 0 (successful).
+ DEBUG [35e528d0] Running /usr/bin/env ls -x /home/deploy/applications/fullstack_task_production/releases as deploy@172.104.148.197
+ DEBUG [35e528d0] Command: /usr/bin/env ls -x /home/deploy/applications/fullstack_task_production/releases
+ DEBUG [5d57a94d] 	20201020145801	20201020153342	20201020155431	20201020192358	20201020193251
+20201020200412
+ DEBUG [5d57a94d] Finished in 0.162 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 172.104.148.197
+ DEBUG [2754a546] Running [ -d /home/deploy/applications/fullstack_task_production/current ] as deploy@172.104.148.197
+ DEBUG [2754a546] Command: [ -d /home/deploy/applications/fullstack_task_production/current ]
+ DEBUG [c4b9e5a7] Finished in 0.137 seconds with exit status 0 (successful).
+ DEBUG [99c817e7] Running /usr/bin/env readlink /home/deploy/applications/fullstack_task_production/current as deploy@172.104.148.197
+ DEBUG [99c817e7] Command: /usr/bin/env readlink /home/deploy/applications/fullstack_task_production/current
+ DEBUG [3a372906] 	/home/deploy/applications/fullstack_task_production/releases/20201020200412
+ DEBUG [3a372906] Finished in 0.143 seconds with exit status 0 (successful).
+  INFO [2d64cbb3] Running /usr/bin/env rm -rf /home/deploy/applications/fullstack_task_production/releases/20201020145801 as deploy@172.104.148.197
+ DEBUG [2d64cbb3] Command: /usr/bin/env rm -rf /home/deploy/applications/fullstack_task_production/releases/20201020145801
+  INFO [feb207c4] Finished in 2.150 seconds with exit status 0 (successful).
+ DEBUG [672550e0] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [672550e0] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases'" 1>&2; false; fi
+ DEBUG [eef8c372] Finished in 0.140 seconds with exit status 0 (successful).
+  INFO [152a26c5] Running /usr/bin/env echo "Branch master (at 92cd0e239b7d75a6cf087c9f6ca760c5d1497fd3) deployed as release 20201020200412 by namaste" >> /home/deploy/applications/fullstack_task_production/revisions.log as deploy@172.104.148.197
+ DEBUG [152a26c5] Command: cd /home/deploy/applications/fullstack_task_production/releases && /usr/bin/env echo "Branch master (at 92cd0e239b7d75a6cf087c9f6ca760c5d1497fd3) deployed as release 20201020200412 by namaste" >> /home/deploy/applications/fullstack_task_production/revisions.log
+  INFO [7b250846] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-10-20 23:11:29 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [16807ce0] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/rvm1scripts/ as deploy@172.104.148.197
+ DEBUG [16807ce0] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/rvm1scripts/
+  INFO [1d08a0c1] Finished in 1.539 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/namaste/.rvm/gems/ruby-2.7.1@fullstack-deploy/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/namaste/.rvm/gems/ruby-2.7.1@fullstack-deploy/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [b6562d94] Running /usr/bin/env chmod +x /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh as deploy@172.104.148.197
+ DEBUG [b6562d94] Command: /usr/bin/env chmod +x /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh
+  INFO [20c6baa1] Finished in 0.140 seconds with exit status 0 (successful).
+  INFO [b8e0d853] Running /usr/bin/env mkdir -p /tmp as deploy@172.104.148.197
+ DEBUG [b8e0d853] Command: /usr/bin/env mkdir -p /tmp
+  INFO [189faf88] Finished in 0.141 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-fullstack_task_production-production-namaste.sh 0.0%
+  INFO Uploading /tmp/git-ssh-fullstack_task_production-production-namaste.sh 100.0%
+  INFO [513f9ce0] Running /usr/bin/env chmod 700 /tmp/git-ssh-fullstack_task_production-production-namaste.sh as deploy@172.104.148.197
+ DEBUG [513f9ce0] Command: /usr/bin/env chmod 700 /tmp/git-ssh-fullstack_task_production-production-namaste.sh
+  INFO [16f22bf4] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [ea375983] Running [ -f /home/deploy/applications/fullstack_task_production/repo/HEAD ] as deploy@172.104.148.197
+ DEBUG [ea375983] Command: [ -f /home/deploy/applications/fullstack_task_production/repo/HEAD ]
+ DEBUG [10fe82d1] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/applications/fullstack_task_production/repo
+ DEBUG [42b0edd3] Running if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [42b0edd3] Command: if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi
+ DEBUG [0e8fe066] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [b3ecfa65] Running /usr/bin/env git remote set-url origin git@github.com:Lyubomyr/fullstack_task.git as deploy@172.104.148.197
+ DEBUG [b3ecfa65] Command: cd /home/deploy/applications/fullstack_task_production/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env git remote set-url origin git@github.com:Lyubomyr/fullstack_task.git )
+  INFO [a8ac048a] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO [6474b50c] Running /usr/bin/env git remote update --prune as deploy@172.104.148.197
+ DEBUG [6474b50c] Command: cd /home/deploy/applications/fullstack_task_production/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d7e881d4] 	Fetching origin
+ DEBUG [d7e881d4] 	Failed to add the host to the list of known hosts (/home/deploy/.ssh/known_hosts).
+ DEBUG [d7e881d4] 	From github.com:Lyubomyr/fullstack_task
+ + 92cd0e2...1d0766a master     -> master  (forced update)
+  INFO [d7e881d4] Finished in 1.536 seconds with exit status 0 (successful).
+ DEBUG [467e7409] Running if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [467e7409] Command: if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi
+ DEBUG [3b56d15c] Finished in 0.139 seconds with exit status 0 (successful).
+  INFO [ec2f3857] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020201131 as deploy@172.104.148.197
+ DEBUG [ec2f3857] Command: cd /home/deploy/applications/fullstack_task_production/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020201131 )
+  INFO [b6be9917] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [7d3e2ca9] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/applications/fullstack_task_production/releases/20201020201131 as deploy@172.104.148.197
+ DEBUG [7d3e2ca9] Command: cd /home/deploy/applications/fullstack_task_production/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/applications/fullstack_task_production/releases/20201020201131 )
+  INFO [a0d928a3] Finished in 0.180 seconds with exit status 0 (successful).
+ DEBUG [4f5e9978] Running if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [4f5e9978] Command: if test ! -d /home/deploy/applications/fullstack_task_production/repo; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/repo'" 1>&2; false; fi
+ DEBUG [7feeab6a] Finished in 0.136 seconds with exit status 0 (successful).
+ DEBUG [785e59f5] Running /usr/bin/env git rev-list --max-count=1 master as deploy@172.104.148.197
+ DEBUG [785e59f5] Command: cd /home/deploy/applications/fullstack_task_production/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [bed2bf6b] 	1d0766a9ff65f56ded6217645f12e80dfe3cdb32
+ DEBUG [bed2bf6b] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [1894d36c] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020201131; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020201131'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [1894d36c] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020201131; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020201131'" 1>&2; false; fi
+ DEBUG [58fe516a] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [86750f04] Running /usr/bin/env echo "1d0766a9ff65f56ded6217645f12e80dfe3cdb32" > REVISION as deploy@172.104.148.197
+ DEBUG [86750f04] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020201131 && /usr/bin/env echo "1d0766a9ff65f56ded6217645f12e80dfe3cdb32" > REVISION
+  INFO [9bf3217f] Finished in 0.136 seconds with exit status 0 (successful).
+  INFO [aa3c0724] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020201131/config /home/deploy/applications/fullstack_task_production/releases/20201020201131 as deploy@172.104.148.197
+ DEBUG [aa3c0724] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020201131/config /home/deploy/applications/fullstack_task_production/releases/20201020201131
+  INFO [899fe8c4] Finished in 0.143 seconds with exit status 0 (successful).
+ DEBUG [42a7d828] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/database.yml ] as deploy@172.104.148.197
+ DEBUG [42a7d828] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/database.yml ]
+ DEBUG [2a6d88ce] Finished in 0.124 seconds with exit status 1 (failed).
+ DEBUG [cbb94699] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/database.yml ] as deploy@172.104.148.197
+ DEBUG [cbb94699] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/database.yml ]
+ DEBUG [c48bc921] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [47d42915] Running /usr/bin/env rm /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/database.yml as deploy@172.104.148.197
+ DEBUG [47d42915] Command: /usr/bin/env rm /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/database.yml
+  INFO [72758562] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [48d92b28] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/database.yml /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/database.yml as deploy@172.104.148.197
+ DEBUG [48d92b28] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/database.yml /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/database.yml
+  INFO [e8bff571] Finished in 0.134 seconds with exit status 0 (successful).
+ DEBUG [2c00e8d3] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/unicorn.rb ] as deploy@172.104.148.197
+ DEBUG [2c00e8d3] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/unicorn.rb ]
+ DEBUG [32b9c31c] Finished in 0.135 seconds with exit status 1 (failed).
+ DEBUG [f081539e] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/unicorn.rb ] as deploy@172.104.148.197
+ DEBUG [f081539e] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/unicorn.rb ]
+ DEBUG [c9fbff85] Finished in 0.125 seconds with exit status 1 (failed).
+  INFO [c856c645] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/unicorn.rb /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/unicorn.rb as deploy@172.104.148.197
+ DEBUG [c856c645] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/unicorn.rb /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/unicorn.rb
+  INFO [226c5199] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [4a7dc653] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/master.key ] as deploy@172.104.148.197
+ DEBUG [4a7dc653] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/master.key ]
+ DEBUG [19e8fc55] Finished in 0.129 seconds with exit status 1 (failed).
+ DEBUG [c7c25a7c] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/master.key ] as deploy@172.104.148.197
+ DEBUG [c7c25a7c] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/master.key ]
+ DEBUG [6f58910e] Finished in 0.138 seconds with exit status 1 (failed).
+  INFO [9993069a] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/master.key /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/master.key as deploy@172.104.148.197
+ DEBUG [9993069a] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/config/master.key /home/deploy/applications/fullstack_task_production/releases/20201020201131/config/master.key
+  INFO [ce74e8ab] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG [84d348fb] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/.ruby-version ] as deploy@172.104.148.197
+ DEBUG [84d348fb] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/.ruby-version ]
+ DEBUG [5e3cc6af] Finished in 0.128 seconds with exit status 1 (failed).
+ DEBUG [0a161f4a] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020201131/.ruby-version ] as deploy@172.104.148.197
+ DEBUG [0a161f4a] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020201131/.ruby-version ]
+ DEBUG [d0bb5c49] Finished in 0.138 seconds with exit status 0 (successful).
+  INFO [06373ccd] Running /usr/bin/env rm /home/deploy/applications/fullstack_task_production/releases/20201020201131/.ruby-version as deploy@172.104.148.197
+ DEBUG [06373ccd] Command: /usr/bin/env rm /home/deploy/applications/fullstack_task_production/releases/20201020201131/.ruby-version
+  INFO [edc83b56] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [293bce6a] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/.ruby-version /home/deploy/applications/fullstack_task_production/releases/20201020201131/.ruby-version as deploy@172.104.148.197
+ DEBUG [293bce6a] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/.ruby-version /home/deploy/applications/fullstack_task_production/releases/20201020201131/.ruby-version
+  INFO [9ffb9ae4] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [b88cec47] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/.env ] as deploy@172.104.148.197
+ DEBUG [b88cec47] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/.env ]
+ DEBUG [c94add23] Finished in 0.132 seconds with exit status 1 (failed).
+ DEBUG [eeaa33fa] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020201131/.env ] as deploy@172.104.148.197
+ DEBUG [eeaa33fa] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020201131/.env ]
+ DEBUG [61590c4d] Finished in 0.132 seconds with exit status 1 (failed).
+  INFO [9ada7485] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/.env /home/deploy/applications/fullstack_task_production/releases/20201020201131/.env as deploy@172.104.148.197
+ DEBUG [9ada7485] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/.env /home/deploy/applications/fullstack_task_production/releases/20201020201131/.env
+  INFO [8dc41de9] Finished in 0.138 seconds with exit status 0 (successful).
+  INFO [ce6b61f4] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020201131 /home/deploy/applications/fullstack_task_production/releases/20201020201131/public /home/deploy/applications/fullstack_task_production/releases/20201020201131/tmp as deploy@172.104.148.197
+ DEBUG [ce6b61f4] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020201131 /home/deploy/applications/fullstack_task_production/releases/20201020201131/public /home/deploy/applications/fullstack_task_production/releases/20201020201131/tmp
+  INFO [edcf33d4] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [9374184c] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/log ] as deploy@172.104.148.197
+ DEBUG [9374184c] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/log ]
+ DEBUG [04f4cfd8] Finished in 0.137 seconds with exit status 1 (failed).
+ DEBUG [4e309e72] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020201131/log ] as deploy@172.104.148.197
+ DEBUG [4e309e72] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020201131/log ]
+ DEBUG [13ffb7e9] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [c390254c] Running /usr/bin/env rm -rf /home/deploy/applications/fullstack_task_production/releases/20201020201131/log as deploy@172.104.148.197
+ DEBUG [c390254c] Command: /usr/bin/env rm -rf /home/deploy/applications/fullstack_task_production/releases/20201020201131/log
+  INFO [bb0dbfca] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [5c047e07] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/log /home/deploy/applications/fullstack_task_production/releases/20201020201131/log as deploy@172.104.148.197
+ DEBUG [5c047e07] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/log /home/deploy/applications/fullstack_task_production/releases/20201020201131/log
+  INFO [9bf9f8b9] Finished in 0.139 seconds with exit status 0 (successful).
+ DEBUG [30cee9e8] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/pids ] as deploy@172.104.148.197
+ DEBUG [30cee9e8] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/pids ]
+ DEBUG [ebca5cf5] Finished in 0.137 seconds with exit status 1 (failed).
+ DEBUG [68b88bef] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020201131/pids ] as deploy@172.104.148.197
+ DEBUG [68b88bef] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020201131/pids ]
+ DEBUG [2ac0efd4] Finished in 0.132 seconds with exit status 1 (failed).
+  INFO [111833b5] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/pids /home/deploy/applications/fullstack_task_production/releases/20201020201131/pids as deploy@172.104.148.197
+ DEBUG [111833b5] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/pids /home/deploy/applications/fullstack_task_production/releases/20201020201131/pids
+  INFO [4ea5a0d9] Finished in 0.138 seconds with exit status 0 (successful).
+ DEBUG [000816e4] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/sockets ] as deploy@172.104.148.197
+ DEBUG [000816e4] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/sockets ]
+ DEBUG [b9565290] Finished in 0.145 seconds with exit status 1 (failed).
+ DEBUG [8740f071] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020201131/sockets ] as deploy@172.104.148.197
+ DEBUG [8740f071] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020201131/sockets ]
+ DEBUG [773d22e4] Finished in 0.134 seconds with exit status 1 (failed).
+  INFO [360d1afd] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/sockets /home/deploy/applications/fullstack_task_production/releases/20201020201131/sockets as deploy@172.104.148.197
+ DEBUG [360d1afd] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/sockets /home/deploy/applications/fullstack_task_production/releases/20201020201131/sockets
+  INFO [99b2577e] Finished in 0.137 seconds with exit status 0 (successful).
+ DEBUG [e47221e1] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/uploads ] as deploy@172.104.148.197
+ DEBUG [e47221e1] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/uploads ]
+ DEBUG [7b126c90] Finished in 0.129 seconds with exit status 1 (failed).
+ DEBUG [ca80eda5] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/uploads ] as deploy@172.104.148.197
+ DEBUG [ca80eda5] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/uploads ]
+ DEBUG [84ae07a6] Finished in 0.132 seconds with exit status 1 (failed).
+  INFO [3591ae4b] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/public/uploads /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/uploads as deploy@172.104.148.197
+ DEBUG [3591ae4b] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/public/uploads /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/uploads
+  INFO [ef26aa77] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG [f9242731] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/assets ] as deploy@172.104.148.197
+ DEBUG [f9242731] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/assets ]
+ DEBUG [f9c96484] Finished in 0.135 seconds with exit status 1 (failed).
+ DEBUG [06322517] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/assets ] as deploy@172.104.148.197
+ DEBUG [06322517] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/assets ]
+ DEBUG [6ae0984b] Finished in 0.132 seconds with exit status 1 (failed).
+  INFO [83d13984] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/public/assets /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/assets as deploy@172.104.148.197
+ DEBUG [83d13984] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/public/assets /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/assets
+  INFO [f3c3814f] Finished in 0.139 seconds with exit status 0 (successful).
+ DEBUG [4f1ff8e6] Running [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/tmp/cache ] as deploy@172.104.148.197
+ DEBUG [4f1ff8e6] Command: [ -L /home/deploy/applications/fullstack_task_production/releases/20201020201131/tmp/cache ]
+ DEBUG [1293771f] Finished in 0.137 seconds with exit status 1 (failed).
+ DEBUG [2a4e07d7] Running [ -d /home/deploy/applications/fullstack_task_production/releases/20201020201131/tmp/cache ] as deploy@172.104.148.197
+ DEBUG [2a4e07d7] Command: [ -d /home/deploy/applications/fullstack_task_production/releases/20201020201131/tmp/cache ]
+ DEBUG [a2b7df10] Finished in 0.146 seconds with exit status 1 (failed).
+  INFO [6ac493a7] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/tmp/cache /home/deploy/applications/fullstack_task_production/releases/20201020201131/tmp/cache as deploy@172.104.148.197
+ DEBUG [6ac493a7] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/shared/tmp/cache /home/deploy/applications/fullstack_task_production/releases/20201020201131/tmp/cache
+  INFO [9a1c999a] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [be4aaa42] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/rvm1scripts/ as deploy@172.104.148.197
+ DEBUG [be4aaa42] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/rvm1scripts/
+  INFO [6ecc4a7c] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/namaste/.rvm/gems/ruby-2.7.1@fullstack-deploy/gems/rvm1-capistrano3-1.4.0/script/install-rvm.sh 0.0%
+  INFO Uploading /Users/namaste/.rvm/gems/ruby-2.7.1@fullstack-deploy/gems/rvm1-capistrano3-1.4.0/script/install-rvm.sh 100.0%
+  INFO [5337188c] Running /usr/bin/env chmod +x /home/deploy/applications/fullstack_task_production/rvm1scripts/install-rvm.sh as deploy@172.104.148.197
+ DEBUG [5337188c] Command: /usr/bin/env chmod +x /home/deploy/applications/fullstack_task_production/rvm1scripts/install-rvm.sh
+  INFO [d5249f98] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [fafc0188] Running /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/install-rvm.sh as deploy@172.104.148.197
+ DEBUG [fafc0188] Command: /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/install-rvm.sh
+ DEBUG [7586a436] 	Downloading https://github.com/rvm/rvm/archive/1.29.10.tar.gz
+ DEBUG [7586a436] 	Downloading https://github.com/rvm/rvm/releases/download/1.29.10/1.29.10.tar.gz.asc
+ DEBUG [7586a436] 	gpg: Signature made Wed Mar 25 21:58:42 2020 UTC
+ DEBUG [7586a436] 	
+ DEBUG [7586a436] 	gpg:                using RSA key 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+ DEBUG [7586a436] 	
+ DEBUG [7586a436] 	gpg: Good signature from "Piotr Kuczynski <piotr.kuczynski@gmail.com>" [unknown
+ DEBUG [7586a436] 	]
+ DEBUG [7586a436] 	gpg: 
+ DEBUG [7586a436] 	WARNING: This key is not certified with a trusted signature!
+ DEBUG [7586a436] 	gpg: 
+ DEBUG [7586a436] 	         There is no indication that the signature belongs to the owner.
+ DEBUG [7586a436] 	Primary key fingerprint: 7D2B AF1C F37B 13E2 069D  6956 105B D0E7 3949 9BDB
+ DEBUG [7586a436] 	
+ DEBUG [7586a436] 	GPG verified '/home/deploy/.rvm/archives/rvm-1.29.10.tgz'
+ DEBUG [7586a436] 	Upgrading the RVM installation in /home/deploy/.rvm/
+ DEBUG [7586a436] 	    RVM PATH line found in /home/deploy/.mkshrc /home/deploy/.profile /home/deploy/.bashrc /home/deploy/.zshrc.
+    RVM sourcing line found in /home/deploy/.profile /home/deploy/.bash_profile /home/deploy/.zlogin.
+ DEBUG [7586a436] 	Upgrade of RVM in /home/deploy/.rvm/ is complete.
+ DEBUG [7586a436] 	  * It looks like some old stuff is laying around RVM, you can cleanup with: <code>rvm cleanup all</code>
+ DEBUG [7586a436] 	
+ DEBUG [7586a436] 	
+ DEBUG [7586a436] 	<warn>Thanks for installing RVM 🙏</warn>
+Please consider donating to our open collective to help us maintain RVM.
+
+👉  Donate: <code>https://opencollective.com/rvm/donate</code>
+
+
+  INFO [7586a436] Finished in 3.385 seconds with exit status 0 (successful).
+ DEBUG [f8e71f92] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020201131; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020201131'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [f8e71f92] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020201131; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020201131'" 1>&2; false; fi
+ DEBUG [4523e120] Finished in 0.156 seconds with exit status 0 (successful).
+  INFO [5da86ca2] Running /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh rvm --install install 2.7.1@fullstack_task as deploy@172.104.148.197
+ DEBUG [5da86ca2] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020201131 && /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh rvm --install install 2.7.1@fullstack_task
+ DEBUG [8b762e8f] 	Already installed ruby-2.7.1.
+To reinstall use:
+
+    rvm reinstall ruby-2.7.1
+
+  INFO [8b762e8f] Finished in 0.607 seconds with exit status 0 (successful).
+ DEBUG [a0718d4a] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020201131; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020201131'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [a0718d4a] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020201131; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020201131'" 1>&2; false; fi
+ DEBUG [cb1a82ed] Finished in 0.083 seconds with exit status 0 (successful).
+  INFO [1d92e702] Running /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh 2.7.1@fullstack_task gem install --file Gemfile as deploy@172.104.148.197
+ DEBUG [1d92e702] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020201131 && /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh 2.7.1@fullstack_task gem install --file Gemfile
+ DEBUG [5b36d755] 	Using rack (2.2.3)
+Using erubi (1.9.0)
+Using coderay (1.1.3)
+Using better_errors (2.8.3)
+Using debug_inspector (0.0.3)
+Using binding_of_caller (0.8.0)
+Using msgpack (1.3.3)
+Using bootsnap (1.4.8)
+Using byebug (11.1.3)
+Using mini_portile2 (2.4.0)
+Using nokogiri (1.10.10)
+Using xpath (3.2.0)
+Using regexp_parser (1.8.1)
+Using rack-test (1.1.0)
+Using mini_mime (1.0.2)
+Using public_suffix (4.0.6)
+Using addressable (2.7.0)
+Using capybara (3.33.0)
+Using dotenv (2.7.6)
+Using concurrent-ruby (1.1.7)
+Using i18n (1.8.5)
+Using faker (2.14.0)
+Using foreman (0.87.2)
+Using zeitwerk (2.4.0)
+Using thread_safe (0.3.6)
+Using tzinfo (1.2.7)
+Using minitest (5.14.2)
+Using activesupport (6.0.3.4)
+Using jbuilder (2.10.1)
+Using kaminari-core (1.2.1)
+Using activemodel (6.0.3.4)
+Using activerecord (6.0.3.4)
+Using kaminari-activerecord (1.2.1)
+Using crass (1.0.6)
+Using loofah (2.7.0)
+Using rails-html-sanitizer (1.3.0)
+Using rails-dom-testing (2.0.3)
+Using builder (3.2.4)
+Using actionview (6.0.3.4)
+Using kaminari-actionview (1.2.1)
+Using kaminari (1.2.1)
+Using ffi (1.13.1)
+Using rb-inotify (0.10.1)
+Using rb-fsevent (0.10.4)
+Using listen (3.2.1)
+Using libv8 (8.4.255.0)
+Using mini_racer (0.3.1)
+Using pg (1.2.3)
+Using pg_search (2.3.4)
+Using nio4r (2.5.4)
+Using puma (4.3.6)
+Using sprockets (4.0.2)
+Using actionpack (6.0.3.4)
+Using sprockets-rails (3.2.2)
+Using thor (1.0.1)
+Using rake (13.0.1)
+Using method_source (1.0.0)
+Using railties (6.0.3.4)
+Using bundler (2.1.4)
+Using mimemagic (0.3.5)
+Using marcel (0.3.3)
+Using globalid (0.4.2)
+Using activejob (6.0.3.4)
+Using activestorage (6.0.3.4)
+Using actiontext (6.0.3.4)
+Using mail (2.7.1)
+Using actionmailer (6.0.3.4)
+Using actionmailbox (6.0.3.4)
+Using websocket-extensions (0.1.5)
+Using websocket-driver (0.7.3)
+Using actioncable (6.0.3.4)
+Using rails (6.0.3.4)
+Using semantic_range (2.3.0)
+Using rack-proxy (0.6.5)
+Using webpacker (5.2.1)
+Using rainbow (3.0.0)
+Using execjs (2.7.0)
+Using connection_pool (2.2.3)
+Using react_on_rails (12.0.3)
+Using tilt (2.0.10)
+Using sassc (2.4.0)
+Using sassc-rails (2.1.2)
+Using sass-rails (6.0.0)
+Using rubyzip (2.3.0)
+Using childprocess (3.0.0)
+Using selenium-webdriver (3.142.7)
+Using spring (2.1.1)
+Using spring-watcher-listen (2.0.1)
+Using turbolinks-source (5.2.0)
+Using turbolinks (5.2.1)
+Using tzinfo-data (1.2020.3)
+Using raindrops (0.19.1)
+Using kgio (2.11.3)
+Using unicorn (5.7.0)
+Using yard (0.9.25)
+Using versionist (2.0.1)
+Using bindex (0.8.1)
+Using web-console (4.0.4)
+Using webdrivers (4.4.1)
+  INFO [5b36d755] Finished in 27.570 seconds with exit status 0 (successful).
+ DEBUG [b0af48bc] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020201131; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020201131'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [b0af48bc] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020201131; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020201131'" 1>&2; false; fi
+ DEBUG [be59260b] Finished in 0.145 seconds with exit status 0 (successful).
+  INFO [c9075b77] Running /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh rvm alias create fullstack_task_production 2.7.1@fullstack_task as deploy@172.104.148.197
+ DEBUG [c9075b77] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020201131 && /usr/bin/env /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh rvm alias create fullstack_task_production 2.7.1@fullstack_task
+ DEBUG [40853a7f] 	Creating alias fullstack_task_production for ruby-2.7.1@fullstack_task
+ DEBUG [40853a7f] 	.....
+  INFO [40853a7f] Finished in 0.565 seconds with exit status 0 (successful).
+  INFO [6396f19a] Running /usr/bin/env git ls-remote git@github.com:Lyubomyr/fullstack_task.git HEAD as deploy@172.104.148.197
+ DEBUG [6396f19a] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fullstack_task_production-production-namaste.sh" ; /usr/bin/env git ls-remote git@github.com:Lyubomyr/fullstack_task.git HEAD )
+ DEBUG [6412e1c7] 	Failed to add the host to the list of known hosts (/home/deploy/.ssh/known_hosts).
+ DEBUG [6412e1c7] 	1d0766a9ff65f56ded6217645f12e80dfe3cdb32	HEAD
+  INFO [6412e1c7] Finished in 1.235 seconds with exit status 0 (successful).
+  INFO [6b1f4a2e] Running /usr/bin/env sudo mkdir -pv /home/deploy/applications/fullstack_task_production as deploy@172.104.148.197
+ DEBUG [6b1f4a2e] Command: /usr/bin/env sudo mkdir -pv /home/deploy/applications/fullstack_task_production
+  INFO [6b1f4a2e] Finished in 0.101 seconds with exit status 0 (successful).
+ DEBUG [4e9be523] Running /usr/bin/env id -un as deploy@172.104.148.197
+ DEBUG [4e9be523] Command: /usr/bin/env id -un
+ DEBUG [c8edf1f9] 	deploy
+ DEBUG [c8edf1f9] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG [a0512d54] Running /usr/bin/env id -gn as deploy@172.104.148.197
+ DEBUG [a0512d54] Command: /usr/bin/env id -gn
+ DEBUG [8b9951af] 	sudo
+ DEBUG [8b9951af] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO [f3c86916] Running /usr/bin/env sudo chown deploy:sudo /home/deploy/applications/fullstack_task_production as deploy@172.104.148.197
+ DEBUG [f3c86916] Command: /usr/bin/env sudo chown deploy:sudo /home/deploy/applications/fullstack_task_production
+  INFO [f3c86916] Finished in 0.171 seconds with exit status 0 (successful).
+  INFO [b6155bae] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared /home/deploy/applications/fullstack_task_production/releases as deploy@172.104.148.197
+ DEBUG [b6155bae] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared /home/deploy/applications/fullstack_task_production/releases
+  INFO [b5e4efe5] Finished in 0.157 seconds with exit status 0 (successful).
+  INFO [1c38d5e2] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared/log /home/deploy/applications/fullstack_task_production/shared/pids /home/deploy/applications/fullstack_task_production/shared/sockets /home/deploy/applications/fullstack_task_production/shared/public/uploads /home/deploy/applications/fullstack_task_production/shared/public/assets /home/deploy/applications/fullstack_task_production/shared/tmp/cache as deploy@172.104.148.197
+ DEBUG [1c38d5e2] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared/log /home/deploy/applications/fullstack_task_production/shared/pids /home/deploy/applications/fullstack_task_production/shared/sockets /home/deploy/applications/fullstack_task_production/shared/public/uploads /home/deploy/applications/fullstack_task_production/shared/public/assets /home/deploy/applications/fullstack_task_production/shared/tmp/cache
+  INFO [862b7f1c] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [3c4bba59] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared/config /home/deploy/applications/fullstack_task_production/shared as deploy@172.104.148.197
+ DEBUG [3c4bba59] Command: /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/shared/config /home/deploy/applications/fullstack_task_production/shared
+  INFO [ff5540cc] Finished in 0.146 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/ruby-version 0.0%
+  INFO Uploading /tmp/ruby-version 100.0%
+  INFO [3837df39] Running /usr/bin/env sudo chmod 644 /tmp/ruby-version as deploy@172.104.148.197
+ DEBUG [3837df39] Command: /usr/bin/env sudo chmod 644 /tmp/ruby-version
+  INFO [3837df39] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [f7d4ae4b] Running /usr/bin/env sudo chown root:root /tmp/ruby-version as deploy@172.104.148.197
+ DEBUG [f7d4ae4b] Command: /usr/bin/env sudo chown root:root /tmp/ruby-version
+  INFO [f7d4ae4b] Finished in 0.144 seconds with exit status 0 (successful).
+  INFO [0ce6d263] Running /usr/bin/env sudo mv /tmp/ruby-version /home/deploy/applications/fullstack_task_production/shared/.ruby-version as deploy@172.104.148.197
+ DEBUG [0ce6d263] Command: /usr/bin/env sudo mv /tmp/ruby-version /home/deploy/applications/fullstack_task_production/shared/.ruby-version
+  INFO [0ce6d263] Finished in 0.147 seconds with exit status 0 (successful).
+ DEBUG [eaa0b575] Running [ -f /home/deploy/applications/fullstack_task_production/shared/config/database.yml ] as deploy@172.104.148.197
+ DEBUG [eaa0b575] Command: [ -f /home/deploy/applications/fullstack_task_production/shared/config/database.yml ]
+ DEBUG [81d99c3e] Finished in 0.135 seconds with exit status 0 (successful).
+ DEBUG [9f1640e2] Running [ -f /home/deploy/applications/fullstack_task_production/shared/config/unicorn.rb ] as deploy@172.104.148.197
+ DEBUG [9f1640e2] Command: [ -f /home/deploy/applications/fullstack_task_production/shared/config/unicorn.rb ]
+ DEBUG [cb8da7c9] Finished in 0.134 seconds with exit status 0 (successful).
+ DEBUG [2712b9e3] Running [ -f /home/deploy/applications/fullstack_task_production/shared/config/master.key ] as deploy@172.104.148.197
+ DEBUG [2712b9e3] Command: [ -f /home/deploy/applications/fullstack_task_production/shared/config/master.key ]
+ DEBUG [eac6c1b8] Finished in 0.135 seconds with exit status 0 (successful).
+ DEBUG [fa498429] Running [ -f /home/deploy/applications/fullstack_task_production/shared/.ruby-version ] as deploy@172.104.148.197
+ DEBUG [fa498429] Command: [ -f /home/deploy/applications/fullstack_task_production/shared/.ruby-version ]
+ DEBUG [72c232ff] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [60a7f6d3] Running [ -f /home/deploy/applications/fullstack_task_production/shared/.env ] as deploy@172.104.148.197
+ DEBUG [60a7f6d3] Command: [ -f /home/deploy/applications/fullstack_task_production/shared/.env ]
+ DEBUG [de423f0e] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [a24f4a59] Running [ -f /home/deploy/applications/fullstack_task_production/releases/20201020201131/REVISION ] as deploy@172.104.148.197
+ DEBUG [a24f4a59] Command: [ -f /home/deploy/applications/fullstack_task_production/releases/20201020201131/REVISION ]
+ DEBUG [9fc8ac34] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [f83d7439] Running /usr/bin/env cat /home/deploy/applications/fullstack_task_production/releases/20201020201131/REVISION 2>/dev/null as deploy@172.104.148.197
+ DEBUG [f83d7439] Command: /usr/bin/env cat /home/deploy/applications/fullstack_task_production/releases/20201020201131/REVISION 2>/dev/null
+ DEBUG [7661c6e1] 	1d0766a9ff65f56ded6217645f12e80dfe3cdb32
+ DEBUG [7661c6e1] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [1cd50192] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020201131; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020201131'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [1cd50192] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020201131; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020201131'" 1>&2; false; fi
+ DEBUG [c887ffb8] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [dbd2961e] Running /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh 2.7.1@fullstack_task rake assets:precompile as deploy@172.104.148.197
+ DEBUG [dbd2961e] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020201131 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; /home/deploy/applications/fullstack_task_production/rvm1scripts/rvm-auto.sh 2.7.1@fullstack_task rake assets:precompile )
+ DEBUG [8940eeca] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [8940eeca] 	Resolving dependencies...
+ DEBUG [8940eeca] 	
+ DEBUG [8940eeca] 	yarn install v1.22.5
+ DEBUG [8940eeca] 	[1/4] Resolving packages...
+ DEBUG [8940eeca] 	[2/4] Fetching packages...
+ DEBUG [8940eeca] 	info fsevents@2.1.3: The platform "linux" is incompatible with this module.
+ DEBUG [8940eeca] 	info "fsevents@2.1.3" is an optional dependency and failed compatibility check. Excluding it from installation.
+ DEBUG [8940eeca] 	info fsevents@1.2.13: The platform "linux" is incompatible with this module.
+ DEBUG [8940eeca] 	info "fsevents@1.2.13" is an optional dependency and failed compatibility check. Excluding it from installation.
+ DEBUG [8940eeca] 	[3/4] Linking dependencies...
+ DEBUG [8940eeca] 	warning " > @babel/preset-react@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [8940eeca] 	warning "@babel/preset-react > @babel/plugin-transform-react-display-name@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [8940eeca] 	warning "@babel/preset-react > @babel/plugin-transform-react-jsx@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [8940eeca] 	warning "@babel/preset-react > @babel/plugin-transform-react-jsx-development@7.11.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [8940eeca] 	warning "@babel/preset-react > @babel/plugin-transform-react-jsx-self@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [8940eeca] 	warning "@babel/preset-react > @babel/plugin-transform-react-jsx-source@7.10.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [8940eeca] 	warning "@babel/preset-react > @babel/plugin-transform-react-pure-annotations@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [8940eeca] 	warning "@babel/preset-react > @babel/plugin-transform-react-jsx > @babel/plugin-syntax-jsx@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+ DEBUG [8940eeca] 	warning " > bootstrap@4.3.0" has unmet peer dependency "jquery@1.9.1 - 3".
+ DEBUG [8940eeca] 	warning " > bootstrap@4.3.0" has unmet peer dependency "popper.js@^1.14.7".
+ DEBUG [8940eeca] 	warning " > react-bootstrap-table-next@4.0.3" has unmet peer dependency "classnames@^2.2.5".
+ DEBUG [8940eeca] 	warning " > react-on-rails@12.0.3" has unmet peer dependency "js-yaml@>= 3.0.0".
+ DEBUG [8940eeca] 	warning " > styled-components@5.2.0" has unmet peer dependency "react-is@>= 16.8.0".
+ DEBUG [8940eeca] 	warning " > webpack-dev-server@3.11.0" has unmet peer dependency "webpack@^4.0.0 || ^5.0.0".
+ DEBUG [8940eeca] 	warning "webpack-dev-server > webpack-dev-middleware@3.7.2" has unmet peer dependency "webpack@^4.0.0".
+ DEBUG [8940eeca] 	[4/4] Building fresh packages...
+ DEBUG [8940eeca] 	Done in 24.14s.
+ DEBUG [8940eeca] 	Compiling...
+ DEBUG [8940eeca] 	Compiled all packs in /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/packs
+Hash: 42ba18302104351c9fa8
+Version: webpack 4.44.2
+Time: 24172ms
+Built at: 10/20/2020 8:13:11 PM
+                                            Asset      Size              Chunks                         Chunk Names
+              css/clientRegistration-7b88dc9f.css   153 KiB  clientRegistration  [emitted] [immutable]  clientRegistration
+          css/clientRegistration-7b88dc9f.css.map  15.7 KiB  clientRegistration  [emitted] [dev]        clientRegistration
+           js/application-9afcbb5693aa87623e69.js   124 KiB         application  [emitted] [immutable]  application
+       js/application-9afcbb5693aa87623e69.js.map   139 KiB         application  [emitted] [dev]        application
+    js/clientRegistration-b0890fec0af198b91337.js  2.31 MiB  clientRegistration  [emitted] [immutable]  clientRegistration
+js/clientRegistration-b0890fec0af198b91337.js.map  2.51 MiB  clientRegistration  [emitted] [dev]        clientRegistration
+                                    manifest.json  1.04 KiB                      [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+Entrypoint clientRegistration = css/clientRegistration-7b88dc9f.css js/clientRegistration-b0890fec0af198b91337.js css/clientRegistration-7b88dc9f.css.map js/clientRegistration-b0890fec0af198b91337.js.map
+[./app/javascript/bundles/helpers/dialog.js] 166 bytes {clientRegistration} [built]
+[./app/javascript/bundles/services/api.js] 3.57 KiB {clientRegistration} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/clientRegistration.js] 323 bytes {clientRegistration} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {clientRegistration} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {clientRegistration} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {clientRegistration} [built]
+    + 214 hidden modules
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js??ref--5-2!node_modules/bootstrap/dist/css/bootstrap.min.css:
+    Entrypoint mini-css-extract-plugin = *
+       2 modules
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js??ref--5-2!node_modules/react-bootstrap-table-next/dist/react-bootstrap-table2.min.css:
+    Entrypoint mini-css-extract-plugin = *
+       2 modules
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js??ref--5-2!node_modules/vex-js/dist/css/vex-theme-os.css:
+    Entrypoint mini-css-extract-plugin = *
+       2 modules
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js??ref--5-2!node_modules/vex-js/dist/css/vex.css:
+    Entrypoint mini-css-extract-plugin = *
+       2 modules
+
+  INFO [8940eeca] Finished in 54.147 seconds with exit status 0 (successful).
+ DEBUG [0d5fb19c] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020201131; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020201131'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [0d5fb19c] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases/20201020201131; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases/20201020201131'" 1>&2; false; fi
+ DEBUG [e7c2a05e] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [7e4a5ae3] Running /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020201131/assets_manifest_backup as deploy@172.104.148.197
+ DEBUG [7e4a5ae3] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020201131 && /usr/bin/env mkdir -p /home/deploy/applications/fullstack_task_production/releases/20201020201131/assets_manifest_backup
+  INFO [80c30e08] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [ffb9417a] Running /usr/bin/env ls /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/assets/.sprockets-manifest* as deploy@172.104.148.197
+ DEBUG [ffb9417a] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020201131 && /usr/bin/env ls /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/assets/.sprockets-manifest*
+ DEBUG [b5d079da] 	/home/deploy/applications/fullstack_task_production/releases/20201020201131/public/assets/.sprockets-manifest-8e09887efecbb1a64d180f3ca08c6aa6.json
+ DEBUG [b5d079da] Finished in 0.134 seconds with exit status 0 (successful).
+ DEBUG [fae8b5aa] Running /usr/bin/env ls /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/assets/.sprockets-manifest* as deploy@172.104.148.197
+ DEBUG [fae8b5aa] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020201131 && /usr/bin/env ls /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/assets/.sprockets-manifest*
+ DEBUG [c3625278] 	/home/deploy/applications/fullstack_task_production/releases/20201020201131/public/assets/.sprockets-manifest-8e09887efecbb1a64d180f3ca08c6aa6.json
+ DEBUG [c3625278] Finished in 0.159 seconds with exit status 0 (successful).
+  INFO [6520681b] Running /usr/bin/env cp /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/assets/.sprockets-manifest-8e09887efecbb1a64d180f3ca08c6aa6.json /home/deploy/applications/fullstack_task_production/releases/20201020201131/assets_manifest_backup as deploy@172.104.148.197
+ DEBUG [6520681b] Command: cd /home/deploy/applications/fullstack_task_production/releases/20201020201131 && /usr/bin/env cp /home/deploy/applications/fullstack_task_production/releases/20201020201131/public/assets/.sprockets-manifest-8e09887efecbb1a64d180f3ca08c6aa6.json /home/deploy/applications/fullstack_task_production/releases/20201020201131/assets_manifest_backup
+  INFO [1dbb0632] Finished in 0.136 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Checking changes in db
+ DEBUG [808622a6] Running /usr/bin/env diff -qr /home/deploy/applications/fullstack_task_production/releases/20201020201131/db /home/deploy/applications/fullstack_task_production/current/db as deploy@172.104.148.197
+ DEBUG [808622a6] Command: /usr/bin/env diff -qr /home/deploy/applications/fullstack_task_production/releases/20201020201131/db /home/deploy/applications/fullstack_task_production/current/db
+ DEBUG [0eb6eee8] Finished in 0.145 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Skip `deploy:migrate` (nothing changed in db)
+  INFO [b2a77dc1] Running /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/releases/20201020201131 /home/deploy/applications/fullstack_task_production/releases/current as deploy@172.104.148.197
+ DEBUG [b2a77dc1] Command: /usr/bin/env ln -s /home/deploy/applications/fullstack_task_production/releases/20201020201131 /home/deploy/applications/fullstack_task_production/releases/current
+  INFO [09295af0] Finished in 0.141 seconds with exit status 0 (successful).
+  INFO [1917e230] Running /usr/bin/env mv /home/deploy/applications/fullstack_task_production/releases/current /home/deploy/applications/fullstack_task_production as deploy@172.104.148.197
+ DEBUG [1917e230] Command: /usr/bin/env mv /home/deploy/applications/fullstack_task_production/releases/current /home/deploy/applications/fullstack_task_production
+  INFO [dec5331f] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [63aa8249] Running /usr/bin/env sudo /etc/init.d/unicorn_fullstack_task_production upgrade as deploy@172.104.148.197
+ DEBUG [63aa8249] Command: /usr/bin/env sudo /etc/init.d/unicorn_fullstack_task_production upgrade
+ DEBUG [63aa8249] 	reloaded OK
+ DEBUG [63aa8249] 	
+  INFO [63aa8249] Finished in 0.153 seconds with exit status 0 (successful).
+ DEBUG [178bdea0] Running /usr/bin/env ls -x /home/deploy/applications/fullstack_task_production/releases as deploy@172.104.148.197
+ DEBUG [178bdea0] Command: /usr/bin/env ls -x /home/deploy/applications/fullstack_task_production/releases
+ DEBUG [0498d711] 	20201020153342	20201020155431	20201020192358	20201020193251	20201020200412
+20201020201131
+ DEBUG [0498d711] Finished in 0.136 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 172.104.148.197
+ DEBUG [046d4e81] Running [ -d /home/deploy/applications/fullstack_task_production/current ] as deploy@172.104.148.197
+ DEBUG [046d4e81] Command: [ -d /home/deploy/applications/fullstack_task_production/current ]
+ DEBUG [ab55492f] Finished in 0.137 seconds with exit status 0 (successful).
+ DEBUG [0c81ae54] Running /usr/bin/env readlink /home/deploy/applications/fullstack_task_production/current as deploy@172.104.148.197
+ DEBUG [0c81ae54] Command: /usr/bin/env readlink /home/deploy/applications/fullstack_task_production/current
+ DEBUG [250ae7ed] 	/home/deploy/applications/fullstack_task_production/releases/20201020201131
+ DEBUG [250ae7ed] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [440a78fb] Running /usr/bin/env rm -rf /home/deploy/applications/fullstack_task_production/releases/20201020153342 as deploy@172.104.148.197
+ DEBUG [440a78fb] Command: /usr/bin/env rm -rf /home/deploy/applications/fullstack_task_production/releases/20201020153342
+  INFO [f01b6acf] Finished in 2.346 seconds with exit status 0 (successful).
+ DEBUG [a8768b71] Running if test ! -d /home/deploy/applications/fullstack_task_production/releases; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases'" 1>&2; false; fi as deploy@172.104.148.197
+ DEBUG [a8768b71] Command: if test ! -d /home/deploy/applications/fullstack_task_production/releases; then echo "Directory does not exist '/home/deploy/applications/fullstack_task_production/releases'" 1>&2; false; fi
+ DEBUG [37ff8a75] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [2403af4e] Running /usr/bin/env echo "Branch master (at 1d0766a9ff65f56ded6217645f12e80dfe3cdb32) deployed as release 20201020201131 by namaste" >> /home/deploy/applications/fullstack_task_production/revisions.log as deploy@172.104.148.197
+ DEBUG [2403af4e] Command: cd /home/deploy/applications/fullstack_task_production/releases && /usr/bin/env echo "Branch master (at 1d0766a9ff65f56ded6217645f12e80dfe3cdb32) deployed as release 20201020201131 by namaste" >> /home/deploy/applications/fullstack_task_production/revisions.log
+  INFO [87c48dcd] Finished in 0.138 seconds with exit status 0 (successful).
