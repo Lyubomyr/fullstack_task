@@ -6,8 +6,8 @@ import cellEditFactory, { Type } from 'react-bootstrap-table2-editor'
 import filterFactory, { textFilter, Comparator } from 'react-bootstrap-table2-filter'
 import { ArticlesContext } from './Context'
 
-const Articles = props => {
-  const { types, articles, sizePerPage, page, totalSize, updateTable, updateArticle, deleteArticle, } = useContext(ArticlesContext)
+const Table = props => {
+  const { types, articles, totalSize, tableProps, updateTable, updateArticle, deleteArticle, } = useContext(ArticlesContext)
 
   const columns = [{
       dataField: 'story.name',
@@ -62,18 +62,21 @@ const Articles = props => {
   }
 
   return (
-    <BootstrapTable
-      remote
-      keyField="id"
-      data={ articles }
-      columns={ columns }
-      defaultSorted={ defaultSorted }
-      filter={ filterFactory() }
-      pagination={ paginationFactory({ sizePerPage, page, totalSize }) }
-      cellEdit={ cellEditFactory(cellEditProps) }
-      onTableChange={ handleTableChange }
-    />
+    <>
+      <h3> Articles </h3>
+      <BootstrapTable
+        remote
+        keyField="id"
+        data={ articles }
+        columns={ columns }
+        defaultSorted={ defaultSorted }
+        filter={ filterFactory() }
+        pagination={ paginationFactory({ sizePerPage: tableProps.sizePerPage, page: tableProps.page, totalSize }) }
+        cellEdit={ cellEditFactory(cellEditProps) }
+        onTableChange={ handleTableChange }
+      />
+    </>
   )
 }
 
-export default Articles
+export default Table

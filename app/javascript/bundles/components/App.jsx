@@ -1,17 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css'
 import React from 'react'
-import ArticlesProvider from './Context'
-import AddArticle from './AddArticle'
-import Articles from './Articles'
+import styled from 'styled-components'
+import Articles from './articles'
 
 const App = props => {
   return (
-    <ArticlesProvider>
-      <AddArticle />
+    <Layout>
       <Articles />
-    </ArticlesProvider>
+    </Layout>
   )
 }
+
+const Layout = styled.div`
+  margin: 0px auto;
+  padding: 20px;
+`
 
 export default App

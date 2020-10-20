@@ -23,6 +23,7 @@
     "react-select": "^3.1.0",
     "styled-components": "^5.2.0",
     "turbolinks": "^5.2.0",
+    "use-debounce": "^5.0.1",
     "vex-dialog": "^1.1.0",
     "vex-js": "^4.1.0"
   },

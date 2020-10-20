@@ -2,7 +2,7 @@
 
 class Article < ApplicationRecord
   include PgSearch::Model
-  pg_search_scope :search_by_text, against: [:name, :text]
+  pg_search_scope :search_by_text, using: { tsearch: { prefix: true }}, against: [:name, :text]
 
   belongs_to :story
 

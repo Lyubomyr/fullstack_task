@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react'
-import API from '../services/api'
-import dialog from '../helpers/dialog'
+import API from '../../services/api'
+import dialog from '../../helpers/dialog'
 
 export const ArticlesContext = createContext()
 
@@ -9,10 +9,12 @@ const ArticlesProvider = props => {
   const [stories, setStories] = useState([])
   const [articles, setArticles] = useState([])
   const [totalSize, setTotalSize] = useState(0)
-  const [page, setPage] = useState(1)
-  const [sortField, setSortField] = useState('name')
-  const [sortOrder, setSortOrder] = useState('asc')
-  const [sizePerPage, setSizePerPage] = useState(25)
+  const [tableProps, setTableProps] = useState({ sortField: 'name',
+                                                 sortOrder: 'asc',
+                                                 sizePerPage: 25,
+                                                 page: 1,
+                                                 search: '',
+                                                 group: '' })
 
   useEffect(() => {
     getStories()
@@ -20,13 +22,10 @@ const ArticlesProvider = props => {
 
   useEffect(() => {
     getArticles()
-  }, [page, sortField, sortOrder, sizePerPage])
+  }, [tableProps])
 
-  const updateTable = options => {
-    setPage(options.page)
-    setSortField(options.sortField)
-    setSortOrder(options.sortOrder)
-    setSizePerPage(options.sizePerPage)
+  const updateTable = props => {
+    setTableProps({...tableProps, ...props})
   }
 
   const getStories = () => {
@@ -40,8 +39,12 @@ const ArticlesProvider = props => {
     })
   }
 
-  const getArticles = options => {
-    API.request(`/api/v1/articles?page=${page}&sort_field=${sortField}&sort_order=${sortOrder}&page_size=${sizePerPage}`, {
+  const tablePropsToStr = () => {
+    return `page=${tableProps.page}&sort_field=${tableProps.sortField}&sort_order=${tableProps.sortOrder}&page_size=${tableProps.sizePerPage}&search_text=${tableProps.search}&group=${tableProps.group}`
+  }
+
+  const getArticles = () => {
+    API.request(`/api/v1/articles?${tablePropsToStr()}`, {
       onSuccess: response => {
         setArticles(response.data.articles)
         setTotalSize(response.data.total_count)
@@ -86,8 +89,8 @@ const ArticlesProvider = props => {
     })
   }
 
-  const data = { types, stories, articles, page, totalSize, sortField, sortOrder, sizePerPage }
-  const methods = { updateTable, getArticles, createArticle, updateArticle, deleteArticle }
+  const data = { types, stories, articles, totalSize, tableProps }
+  const methods = { getArticles, createArticle, updateArticle, deleteArticle, updateTable }
 
   return (
     <ArticlesContext.Provider value={{ ...data, ...methods }}>
