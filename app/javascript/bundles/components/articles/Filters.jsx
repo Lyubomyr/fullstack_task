@@ -11,7 +11,7 @@ const Filters = props => {
   const [filters, setFilters] = useState({ search: '', group: 'none'})
 
   const groupBy = [
-    { value: 'none', label: 'None' },
+    { value: null, label: 'None' },
     { value: 'article_type', label: 'Type' },
     { value: 'name', label: 'Name' },
     { value: 'text', label: 'Text' },

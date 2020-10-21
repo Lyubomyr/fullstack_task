@@ -6,13 +6,15 @@ import Select from 'react-select'
 
 const Form = props => {
   const { types, stories, createArticle } = useContext(ArticlesContext)
-  const [article, setArticle] = useState({ story_id: stories[0]?.id,
+  const defaultArticle = { story_id: stories[0]?.id,
                                            article_type: types[0]?.value,
                                            name: '',
-                                           text: '' })
+                                           text: '' }
+  const [article, setArticle] = useState(defaultArticle)
 
   const handleSave = () => {
     createArticle(article)
+    setArticle(defaultArticle)
   }
 
   return (

@@ -182,6 +182,7 @@ GEM
       rails (>= 3.2)
       rainbow (~> 3.0)
       webpacker (>= 4.0)
+    redis (4.2.2)
     regexp_parser (1.8.1)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
@@ -267,6 +268,7 @@ DEPENDENCIES
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.4)
   react_on_rails (~> 12.0.0)
+  redis (~> 4.0)
   sass-rails (>= 6)
   selenium-webdriver
   spring

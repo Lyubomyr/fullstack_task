@@ -15,7 +15,7 @@ const ArticlesProvider = props => {
                                                  sizePerPage: 25,
                                                  page: 1,
                                                  search: '',
-                                                 group: '' })
+                                                 group: null })
 
   useEffect(() => {
     getStories()

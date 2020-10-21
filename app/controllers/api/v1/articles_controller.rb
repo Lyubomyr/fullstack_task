@@ -6,21 +6,17 @@ class API::V1::ArticlesController < API::V1::BaseController
   # GET /articles
   # GET /articles.json
   def index
-    # TODO: create constants, move logic to service, add validations (pages in range, allowed groups, order only for existing fields, etc)
+    result = ::ArticlesProcessorService.new(
+      page: params[:page],
+      page_size: params[:page_size],
+      sort_field: params[:sort_field],
+      sort_order: params[:sort_order],
+      search_text: params[:search_text],
+      group: params[:group]
+    ).get_records
 
-    page = params[:page] || 1
-    page_size = params[:page_size] || 25
-    sort_field = params[:sort_field] || :name
-    sort_order = params[:sort_order] == 'desc' ? :desc : :asc
-    search_text = params[:search_text]
-    group = params[:group]
-
-    @articles = Article.includes(:story)
-                       .order(sort_field == 'story.name' ? "stories.name #{sort_order}" : Article.arel_table[sort_field].send(sort_order))
-                       .page(page)
-                       .per(page_size)
-
-    @articles = @articles.search_by_text(search_text) if search_text.present?
+    @grouped_by = result[:grouped_by]
+    @articles = result[:data]
   end
 
 
