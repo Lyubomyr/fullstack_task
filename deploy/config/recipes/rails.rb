@@ -12,4 +12,11 @@ namespace :rails do
       execute "#{fetch(:bundle_exec)} rake db:seed RAILS_ENV=#{fetch(:rails_env)}"
     end
   end
+
+  desc "rails webpacker:compile"
+  task :compile do
+    on roles(:all) do
+      execute "#{fetch(:bundle_exec)} rails webpacker:compile RAILS_ENV=#{fetch(:rails_env)}"
+    end
+  end
 end

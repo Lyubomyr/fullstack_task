@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react'
 import API from '../../services/api'
 import dialog from '../../helpers/dialog'
+import consumer from '../../../channels/consumer'
 
 export const ArticlesContext = createContext()
 
@@ -18,11 +19,22 @@ const ArticlesProvider = props => {
 
   useEffect(() => {
     getStories()
+
+    const subscription = consumer.subscriptions.create("ArticlesChannel", {
+      received(data) {
+        getArticles()
+      }
+    })
+
+    return () => {
+      if (subscription) consumer.subscriptions.remove(subscription)
+    }
   }, [])
 
   useEffect(() => {
     getArticles()
   }, [tableProps])
+
 
   const updateTable = props => {
     setTableProps({...tableProps, ...props})
@@ -60,7 +72,7 @@ const ArticlesProvider = props => {
     API.post('/api/v1/articles', {
       payload: { article: article },
       onSuccess: response => {
-        getArticles()
+
       }
     })
   }
@@ -69,7 +81,7 @@ const ArticlesProvider = props => {
     API.patch(`/api/v1/articles/${article.id}`, {
       payload: { article: article },
       onSuccess: response => {
-        getArticles()
+
       }
     })
   }
@@ -81,7 +93,7 @@ const ArticlesProvider = props => {
         if (val) {
           API.delete(`/api/v1/articles/${article.id}`, {
             onSuccess: response => {
-              getArticles()
+
             }
           })
         }

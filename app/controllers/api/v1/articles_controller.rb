@@ -29,6 +29,7 @@ class API::V1::ArticlesController < API::V1::BaseController
   def create
     @article = Article.new(article_params)
     if @article.save
+      ActionCable.server.broadcast "articles_channel", content: {action: 'create'}
       render json: @article
     else
       render json: @article.errors, status: :unprocessable_entity
@@ -39,6 +40,7 @@ class API::V1::ArticlesController < API::V1::BaseController
   # PATCH/PUT /articles/1.json
   def update
     if @article.update(article_params)
+      ActionCable.server.broadcast "articles_channel", content: {action: 'update'}
       render json: @article
     else
       render json: @article.errors, status: :unprocessable_entity
@@ -49,6 +51,7 @@ class API::V1::ArticlesController < API::V1::BaseController
   # DELETE /articles/1.json
   def destroy
     @article.destroy
+    ActionCable.server.broadcast "articles_channel", content: {action: 'destroy'}
 
     head :no_content
   end

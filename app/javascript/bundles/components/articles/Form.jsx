@@ -5,7 +5,7 @@ import { ArticlesContext } from './Context'
 import Select from 'react-select'
 
 const Form = props => {
-  const { types, stories, createArticle, getArticles } = useContext(ArticlesContext)
+  const { types, stories, createArticle } = useContext(ArticlesContext)
   const [article, setArticle] = useState({ story_id: stories[0]?.id,
                                            article_type: types[0]?.value,
                                            name: '',
@@ -13,7 +13,6 @@ const Form = props => {
 
   const handleSave = () => {
     createArticle(article)
-    getArticles()
   }
 
   return (

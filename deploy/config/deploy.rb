@@ -52,4 +52,5 @@ before 'deploy', 'rvm1:alias:create'
 
 after 'postgresql:generate_database_yml', 'setup:all'
 after 'deploy:check:make_linked_dirs', 'rvm1:create_rvmrc'
+after 'deploy:assets:precompile', 'rails:compile'
 after 'deploy:publishing', 'unicorn:upgrade'   # it's like restart, but with zero downtime
