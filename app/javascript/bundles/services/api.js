@@ -6,15 +6,15 @@ class API {
   }
 
   patch(path, params = {}) {
-    this.request(path, { ...params, method: 'PATCH' })
+    return this.request(path, { ...params, method: 'PATCH' })
   }
 
   post(path, params = {}) {
-    this.request(path, { ...params, method: 'POST' })
+    return this.request(path, { ...params, method: 'POST' })
   }
 
   delete(path, params = {}) {
-    this.request(path, { ...params, method: 'DELETE' })
+    return this.request(path, { ...params, method: 'DELETE' })
   }
 
   request(path, params = {}) {
@@ -24,21 +24,11 @@ class API {
     const token = document.querySelector('[name=csrf-token]').content
     axios.defaults.headers.common['X-CSRF-TOKEN'] = token
 
-    axios({
+    return axios({
       url: `${this.endpoint}${path}`,
       method,
       headers: { 'content-type': contentType },
       data: params.payload
-    })
-    .then(response => {
-      if (typeof params.onSuccess === 'function') {
-        params.onSuccess(response)
-      }
-    })
-    .catch(error => {
-      if (typeof params.onFailure === 'function') {
-        params.onFailure(error)
-      }
     })
   }
 }

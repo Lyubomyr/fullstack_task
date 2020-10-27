@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import ArticlesProvider from './articles/Context'
 import Articles from './articles'
 
 const App = props => {
   return (
     <Layout>
-      <Articles />
+      <ArticlesProvider>
+        <Articles />
+      </ArticlesProvider>
     </Layout>
   )
 }

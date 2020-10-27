@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types'
 import React, { useState, useContext, useEffect } from 'react'
+import { observer } from 'mobx-react-lite'
 import styled from 'styled-components'
 import { ArticlesContext } from './Context'
 import Select from 'react-select'
 import { useDebouncedCallback } from 'use-debounce'
 
-const Filters = props => {
-  const { updateTable } = useContext(ArticlesContext)
-  const debouncedUpdate = useDebouncedCallback(updateTable, 400)
+const Filters = observer(() => {
+  const articlesContext = useContext(ArticlesContext)
+  const debouncedUpdate = useDebouncedCallback(articlesContext.updateTable, 400)
   const [filters, setFilters] = useState({ search: '', group: 'none'})
 
   const groupBy = [
@@ -20,7 +21,7 @@ const Filters = props => {
 
   const handleChange = (filter, newFilters) => {
     setFilters(newFilters)
-    filter === 'search' ? debouncedUpdate.callback(newFilters) : updateTable(newFilters)
+    filter === 'search' ? debouncedUpdate.callback(newFilters) : articlesContext.updateTable(newFilters)
   }
 
   return (
@@ -45,7 +46,7 @@ const Filters = props => {
       </Wrapper>
     </>
   )
-}
+})
 
 const Wrapper = styled.div`
   display: flex;

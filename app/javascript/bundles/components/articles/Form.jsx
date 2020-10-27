@@ -1,21 +1,27 @@
 import PropTypes from 'prop-types'
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
+import { observer } from 'mobx-react-lite'
 import styled from 'styled-components'
 import { ArticlesContext } from './Context'
 import Select from 'react-select'
 
-const Form = props => {
-  const { types, stories, createArticle } = useContext(ArticlesContext)
-  const defaultArticle = { story_id: stories[0]?.id,
-                                           article_type: types[0]?.value,
+const Form = observer(() => {
+  const articlesContext = useContext(ArticlesContext)
+
+  const defaultArticle = { story_id: articlesContext.stories[0]?.id,
+                                           article_type: articlesContext.types[0]?.value,
                                            name: '',
                                            text: '' }
   const [article, setArticle] = useState(defaultArticle)
 
   const handleSave = () => {
-    createArticle(article)
+    articlesContext.createArticle(article)
     setArticle(defaultArticle)
   }
+
+  useEffect(() => {
+    setArticle(defaultArticle)
+  }, [articlesContext.stories, articlesContext.types])
 
   return (
     <>
@@ -24,18 +30,18 @@ const Form = props => {
         <div className="form-group">
           <label>Story Name</label>
             <StyledSelect
-              options={stories}
+              options={articlesContext.stories}
               getOptionValue={({id}) => id}
               getOptionLabel={({name}) => name}
-              value={stories.filter(({id}) => id === article.story_id)}
+              value={articlesContext.stories.filter(({id}) => id === article.story_id)}
               onChange={story => setArticle({...article, story_id: story.id})}
             />
         </div>
         <div className="form-group">
           <label>Type</label>
           <StyledSelect
-            options={types}
-            value={types.filter(({value}) => value === article.article_type)}
+            options={articlesContext.types}
+            value={articlesContext.types.filter(({value}) => value === article.article_type)}
             onChange={type => setArticle({...article, article_type: type.value})}
           />
         </div>
@@ -59,7 +65,7 @@ const Form = props => {
       </FormWrapper>
     </>
   )
-}
+})
 
 const FormWrapper = styled.div`
   display: flex;
